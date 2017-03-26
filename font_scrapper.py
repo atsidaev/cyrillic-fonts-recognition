@@ -35,7 +35,6 @@ shall = input("%s (y/N) " % msg).lower() == 'y'
 
 if shall == True:
     time.sleep(10)
-    #check that file exists
     files = len(os.listdir(os.getcwd() + "/SampleFonts"))
     print(files)
     print("getting fonts from website")

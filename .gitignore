@@ -92,3 +92,5 @@ ENV/
 *.ttf
 *.otf
 *.png
+*.jpg
+*.jpeg

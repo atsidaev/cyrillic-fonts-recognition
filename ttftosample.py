@@ -1,7 +1,7 @@
 #!usr/bin/python
 from PIL import Image, ImageDraw, ImageFont
 import os
-
+#TODO:Перенести эти штуки в Sample Extractor чтобы как-то по-человечески все было 
 def get_lower_cyrillic():
     return 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
 

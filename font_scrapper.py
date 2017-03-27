@@ -4,7 +4,7 @@ from selenium import webdriver
 import time
 import os.path
 from tqdm import tqdm
-
+#TODO: придумать как получше этот скрипт сделать
 url = 'https://www.fonts-online.ru/fonts/cyrillic'
 page = '?page='
 page_num = 1

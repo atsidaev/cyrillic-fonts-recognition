@@ -1,8 +1,12 @@
+import os
 import cv2
-import numpy as np
 import matplotlib
 matplotlib.use('Qt5Agg')
 from matplotlib import pyplot as plt
+
+#TODO: Добавить обработку всех шрифтов в директории, чтобы доставались из всех изображений все символы, а потом полученные раскидывать в файлы
+
+#TODO: Добивать каждый сэмпл до определенного размера, чтобы потом скармилвать их системе
 
 def extract_from_grayscale_png(filename):
     img = cv2.imread('sample.png',  cv2.CV_8UC1)
@@ -15,9 +19,8 @@ def extract_from_grayscale_png(filename):
         idx += 1
         x, y, w, h = cv2.boundingRect(cnt)
         roi = img2[y:y + h, x:x + w]
-        cv2.imwrite(str(idx) + '.jpg', roi)
+        cv2.imwrite(os.getcwd() + '/SampleImages/' + str(idx) + '.png', cv2.bitwise_not(roi, roi))
     plt.imshow(img2, 'gray')
     plt.show()
-
 
 extract_from_grayscale_png("sample.png")

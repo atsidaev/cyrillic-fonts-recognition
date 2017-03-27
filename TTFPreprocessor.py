@@ -5,7 +5,7 @@ import os
 
 from fontTools import ttLib
 from fontTools.unicode import Unicode
-
+#TODO: привести всю шнягу в порядок, чтобы она работала связно, а не нужно было штуки вызывать по одной
 def normalize_ttf_filename(directory_path):
     dir = os.getcwd()
     os.chdir(os.path.abspath(directory_path))
@@ -39,6 +39,8 @@ def getFontName(filename):
         if name and family: break
         tt.close()
     return name, family
+
+#TODO:Починить багу, где у тебя шрифты сделанные от балды кидали исключение
 
 def isCyrillicFont(filename):
     ISO_CMAP_TABLE = 0

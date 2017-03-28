@@ -1,4 +1,4 @@
-import ttftosample
+import fontpainter
 
 import sys
 import os
@@ -64,4 +64,4 @@ if __name__ == "__main__":
     normalize_ttf_filename("SampleFonts")#sys.argv[1])
    # remove_non_cyrillic_fonts("SampleFonts")
     for filename in enumerate(os.listdir("SampleFonts")):
-        ttftosample.ttf_to_sample(filename[1])
+        fontpainter.ttf_to_sample(filename[1])

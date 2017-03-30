@@ -1,10 +1,25 @@
 #!/bin/bash
+# Selenium
+if [ ! -f geckodriver -a ! "1`which geckodriver`" != "1" ]
+then
+	ARCH=32
+	uname -a | grep x64 && ARCH=64
+	GECKOVER=v0.13.0
+	GECKOTGZ=geckodriver-$GECKOVER-linux${ARCH}.tar.gz
+	wget https://github.com/mozilla/geckodriver/releases/download/$GECKOVER/$GECKOTGZ
+	tar xf $GECKOTGZ geckodriver
+	rm $GECKOTGZ
+	sudo mv geckodriver $HOME/.local/bin
+fi
+pip3 install selenium
+
 #pillow and font tools
 sudo apt-get install libjpeg-dev libfreetype6-dev zlib1g-dev
 pip3 install fonttools
 pip3 install pillow
-pip3 install selenium
 pip3 install numpy
+pip3 install tqdm
+
 #opencv
 sudo apt-get install build-essential
 sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev

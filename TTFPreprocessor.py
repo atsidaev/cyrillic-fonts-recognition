@@ -63,5 +63,3 @@ def sortByAlphabet(input):
 #TODO: привести всю шнягу в порядок, чтобы она работала связно, а не нужно было штуки вызывать по одной
 if __name__ == "__main__":
     normalize_ttf_filename("SampleFonts")
-    for filename in enumerate(os.listdir("SampleFonts")):
-        painter.ttf_to_sample(filename[1])

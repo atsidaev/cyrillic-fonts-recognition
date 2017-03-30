@@ -1,4 +1,4 @@
-#!usr/bin/python
+#!/usr/bin/python3
 import selenium
 from selenium import webdriver
 import time

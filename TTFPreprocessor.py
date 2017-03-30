@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import FontPainter as painter
 
 import sys

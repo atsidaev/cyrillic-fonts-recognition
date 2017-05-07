@@ -11,7 +11,7 @@ def sort_by_alphabet(input):
 class Font:
     def __init__(self, file):
         self.path = file
-        self.type = self.get_font_type(self.ttf)
+        self.type = self.get_font_type()
         self.family, self.name = self.get_fontname(self.path)
         self.is_cyrillic = self.check_cyrillic_symbols(self.path)
 
@@ -48,6 +48,13 @@ class Font:
                 counter += 1
         return counter == 66
 
+    def get_font_type(self):
+        filename, file_extention = os.path.splitext(self.path)
+        file_extention = file_extention.lower()
+        if os.path.basename(input).endswith(".ttf"):
+            return "TTF"
+        elif os.path.basename(input).endswith(".otf"):
+            return "OTF"
 '''
 
 def normalize_ttf_filename(directory_path):

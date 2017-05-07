@@ -20,16 +20,3 @@ def write_countours(img, contours, name, dest):
         x, y, w, h = cv2.boundingRect(cnt)
         roi = img[y:y + h, x:x + w]
         cv2.imwrite(os.path.join(dest, str(idx) + '_' + name[:-4].replace("_alltogether","") + '.png'), cv2.bitwise_not(roi, roi))
-'''
-def prepare_sample_from_dir(src, dest):
-    files = [f for f in os.listdir(src) if os.path.isfile(os.path.join(src, f)) and (f.endswith(".otf")or f.endswith(".ttf"))]
-    for font in files:
-        painter.draw_all_symbols(os.path.join(src, font), dest,fontsize = 52, image_size = (3000, 3000))
-    samples = os.listdir(dest)
-    for sample in samples:
-        img, countours, hierarchy = extract_all_countours(os.path.join(dest, sample))
-        write_countours(img, countours, os.path.basename(sample), dest)
-
-if __name__ == "__main__":
-    prepare_sample_from_dir(sys.argv[1], sys.argv[2])
-'''

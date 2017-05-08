@@ -1,6 +1,6 @@
 #!usr/bin/python
 from PIL import Image, ImageDraw, ImageFont
-import Preprocessing.TTF.Font
+import Preprocessing.TTF.FontManipulator as manipulator
 import os
 
 def get_lower_cyrillic():
@@ -29,19 +29,40 @@ def draw_all_font_symbols(font, fontsize, image_size, output_dir):
     draw.text((64, 128), upper_letters,(0, 0, 0), font=font)
     draw.text((64, 192), digits, (0, 0, 0), font=font)
 
-    image.save(generate_name(output_dir, font.name, "_all"))
+    image.save(generate_name(output_dir, manipulator.get_fontname()[0], "_all"))
 
-def draw_text(font, text, fontsize, image_size, output_dir):
+def draw_text(filename, text, fontsize, image_size, output_dir):
     image = Image.new('RGBA', (image_size[0], image_size[1]),(255,255,255))
     draw = ImageDraw.Draw(image)
-    if font.type == "TTF":
-       draw_font = ImageFont.truetype(input, size=fontsize)
-    elif font.type == "OTF":
-        draw_font= ImageFont.FreeTypeFont(input, size = fontsize)
+    draw_font = None
+
+    file, extension = os.path.splitext(filename)
+    extension = extension.lower()
+
+    if extension == ".ttf":
+       draw_font = ImageFont.truetype(filename, size=fontsize)
+    elif extension == ".otf":
+        draw_font= ImageFont.FreeTypeFont(filename, size = fontsize)
 
     draw.text((64, 64), text,(0, 0, 0), font=draw_font)
 
-    image.save(generate_name(output_dir, font.name, "sample"))
+    image.save(generate_name(output_dir, manipulator.get_fontname()[0], "sample"))
+#have to test
+def draw_sign(filename, sign, fontsize, image_size, output_dir):
+    image = Image.new('RGBA', (image_size[0], image_size[1]),(255,255,255))
+    draw = ImageDraw.Draw(image)
+    draw_font = None
+    file, extension = os.path.splitext(filename)
+    extension = extension.lower()
+    if extension == ".ttf":
+       draw_font = ImageFont.truetype(filename, size=fontsize)
+    elif extension == ".otf":
+        draw_font= ImageFont.FreeTypeFont(filename, size = fontsize)
+    w, h = draw.textsize(sign.encode('utf-8').decode('latin-1'), font = draw_font)
+    x = (image_size[0] - w) / 2
+    y = (image_size[1] - h) / 2
+    draw.text((x, y), sign, (0, 0, 0), font = draw_font)
+    image.save(os.path.join(output_dir, sign + "_" + os.path.basename(filename)[:-4] + ".png"))
 
 def generate_name(dir, font_name, text):
     return os.path.join(dir, font_name, text, ".png")

@@ -16,12 +16,5 @@ if __name__ == "__main__":
         manipulator.normalize_ttf_filename(os.path.join(src, f))
         for i in text:
             painter.draw_sign(os.path.join(src, f), i, 40, [64,64], dest)
-'''
-    
-    text = str.join(painter.get_lower_cyrillic(), painter.get_upper_cyrillic(), painter.get_digits(), "")
-    for font in files:
-        for i in text:
-            painter.draw_sign(font, i, 36, [64,64], dest)
-'''
 
 

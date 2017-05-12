@@ -19,7 +19,8 @@ pip3 install fonttools
 pip3 install pillow
 pip3 install numpy
 pip3 install tqdm
-
+pip3 install imutils
+pip3 install scipy
 #opencv
 sudo apt-get install build-essential
 sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev

@@ -11,13 +11,14 @@ if __name__ == "__main__":
     image = "sample.png"
     img, contours, hierarchy = Contour.extract_all_countours(image)
     coordinates = Contour.find_contour_coordinates(img, contours, hierarchy)
-    average = Contour.find_average_distance(coordinates)
-    nearest = Contour.get_nearest_graph(coordinates, average)
-    idx = 0
-    for c in contours:
-      #  Contour.write_contour( img, str(idx) + "result.png", c)
-        idx+=1
-
-
-    print("done")
+    nearest = Contour.get_nearest_graph(coordinates)
+    target_contours = []
+    mark = [False] * len(nearest)
+    for i in range(0, len(nearest)):
+        if mark[i] == True:
+            continue
+        for j in range(0, len(nearest[i])):
+            target_contours.append(coordinates[j][1])
+        rect = cv2.minAreaRect(target_contours)
+        print("done")
 

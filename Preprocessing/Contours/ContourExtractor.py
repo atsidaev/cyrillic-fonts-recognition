@@ -20,56 +20,63 @@ def extract_all_countours(image):
 def find_contour_coordinates(image, cnts, hierarchy):
     coordinates = []
     for c in cnts:
-        box= cv2.minAreaRect(c)
-        box = cv2.BoxPoints(box) if imutils.is_cv2() else cv2.boxPoints(box)
-        box = np.array(box, dtype="int")
-        box = perspective.order_points(box)
-        cX = np.average(box[:, 0])
-        cY = np.average(box[:, 1])
-        coordinates.append([(cX,cY), c, box])
+        box= cv2.boundingRect(c)
+        coordinates.append([c, box])
     return coordinates
+'''
+def write_contour(img, image, contours):
 
-def write_contour(img, image, contour):
+    #x, y, w, h = cv2.boundingRect(contour)
 
-    x, y, w, h = cv2.boundingRect(contour)
-    '''
     pts1 = np.float32([x,y])
-    '''
-    roi = img[y:y + h, x:x + w]
-    cv2.imwrite(image, roi)
+
+    #roi = img[y:y + h, x:x + w]
+    cv2.imwrite(image, [contours])
 
     #cv2.cv2.resize()
-
-
-def get_nearest_graph(coord_cnts, near_dest):
+'''
+def get_nearest_graph(coord_cnts):
     length = len(coord_cnts)
     nearest = [[]] * length
     for i in range(0, length):
-        nearest[i].append(i)
+        nearest[i].append(coord_cnts[i])
         for k in range(0, length - 1):
-            if find_distance_between(coord_cnts[i], coord_cnts[k]) <= near_dest:
-                nearest[i].append(k)
+            if i != k:
+                x, y, w, h = coord_cnts[i][1]
+                x1, y1, w1, h1 = coord_cnts[k][1]
+                vertical = find_vertical_distance(coord_cnts[i], coord_cnts[k])
+                horisontal = find_horisontal_distance(coord_cnts[i], coord_cnts[k])
+                if x < x1 and (x + w) < (x1 + w1):
+                    cnt_area1 = cv2.contourArea(coord_cnts[i][0])
+                    cnt_area2 = cv2.contourArea(coord_cnts[k][0])
+                    if (cnt_area1/cnt_area2) < 0.3 or (cnt_area1/cnt_area2) < 0.3:
+                        nearest[i].append(k)
     return nearest
 
-def find_distance_between(coord_cnt1, coord_cnt2):
-    return dist.euclidean((coord_cnt1[0][0],coord_cnt1[0][1]), (coord_cnt2[0][0], coord_cnt2[0][1]))
+def find_vertical_distance(coord_cnt1, coord_cnt2):
+    x,y,w,h = coord_cnt1[1]
+    x1,y1,w1,h1 = coord_cnt2[1]
+    return dist.euclidean( (x,y), (x1+w1, y1+h1) )
 
+def find_horisontal_distance(coord_cnt1, coord_cnt2):
+    x,y,w,h = coord_cnt1[1]
+    x1,y1,w1,h1 = coord_cnt2[1]
+    return dist.euclidean( (x+w,y+h), (x1, y1) )
 
-def find_average_distance(coord_cnts):
-    sum = 0
+def find_min_vertical_distance(coord_cnts):
+    distances = []
     for c in coord_cnts:
         for k in coord_cnts:
-            sum += find_distance_between(c, k)
-    return sum/len(coord_cnts)
+            distances.append(find_vertical_distance(c, k))
+    return min(distances)
 
-def midpoint(ptA, ptB):
-	return ((ptA[0] + ptB[0]) * 0.5, (ptA[1] + ptB[1]) * 0.5)
-'''
-def write_countours(img, contours, name, dest):
-    idx = 0
-    for cnt in contours:
-        idx += 1
-        x, y, w, h = cv2.boundingRect(cnt)
-        roi = img[y:y + h, x:x + w]
-        cv2.imwrite(os.path.join(dest, str(idx) + '_' + name[:-4].replace("_alltogether","") + '.png'), cv2.bitwise_not(roi, roi))
-'''
+def find_min_horisontal_distance(coord_cnts):
+    distances = []
+    for c in coord_cnts:
+        for k in coord_cnts:
+            distances.append(find_horisontal_distance(c, k))
+    return min(distances)
+
+
+
+

@@ -16,5 +16,3 @@ if __name__ == "__main__":
         manipulator.normalize_ttf_filename(os.path.join(src, f))
         for i in text:
             painter.draw_sign(os.path.join(src, f), i, 40, [64,64], dest)
-
-

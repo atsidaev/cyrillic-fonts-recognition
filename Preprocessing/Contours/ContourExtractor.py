@@ -16,22 +16,15 @@ def extract_all_countours(img):
 def draw_bounding_boxes(img, contours, hierarchy):
     for cnt in contours:
         x, y, w, h = cv2.boundingRect(cnt)
-        cv2.rectangle(img, (x, y), (x + w, y + h), (255, 255, 255), 1)
+        cv2.rectangle(img, (x, y), (x + w, y + h), (255, 255, 255), 3)
     return cv2.bitwise_not(img,img)
 
 def get_roi(img,x,y,w,h):
     roi = img[y:y + h, x:x + w]
     return roi
-def check_bounds(x, y, w, h):
-    div = w/h
-    if div > 0.3:
-        return False
-    else:
-        return True
-def write_sample(image, contour, name, sample_size):
 
+def write(image, contour, name, sample_size):
     x, y, w, h = cv2.boundingRect(contour)
-    #check_bounds()
     roi = get_roi(image, x, y, w, h)
     temp_name = name+"_temp_.png"
     cv2.imwrite(temp_name, roi)
@@ -44,3 +37,7 @@ def write_sample(image, contour, name, sample_size):
     dst = cv2.warpPerspective(temp_img, M, (sample_size[0], sample_size[1]))
     cv2.imwrite(name+"_sample.png", dst)
     os.remove(temp_name)
+
+def write_sample(image, contour, name, sample_size):
+    x, y, w, h = cv2.boundingRect(contour)
+    write(image, contour, name, sample_size)

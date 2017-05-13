@@ -1,24 +1,20 @@
 #!/usr/bin/python3
-import sys
-import os
-import Preprocessing.TTF.FontManipulator as manipulator
-import Preprocessing.TTF.FontPainter as painter
+
 import Preprocessing.Contours.ContourExtractor as Contour
 import cv2
-import numpy as np
+from matplotlib import pyplot as plt
+
 
 if __name__ == "__main__":
-    image = "sample.png"
-    img, contours, hierarchy = Contour.extract_all_countours(image)
-    coordinates = Contour.find_contour_coordinates(img, contours, hierarchy)
-    nearest = Contour.get_nearest_graph(coordinates)
-    target_contours = []
-    mark = [False] * len(nearest)
-    for i in range(0, len(nearest)):
-        if mark[i] == True:
-            continue
-        for j in range(0, len(nearest[i])):
-            target_contours.append(coordinates[j][1])
-        rect = cv2.minAreaRect(target_contours)
-        print("done")
+    image = Contour.open_image("sample.png")
+    original = cv2.imread("sample.png", cv2.CV_8UC1)
 
+    img, contours, hierarchy = Contour.extract_all_countours(image)
+    bounding_img = Contour.draw_bounding_boxes(img, contours, hierarchy)
+    plt.subplot(121), plt.imshow(original, cmap='gray'), plt.title('original')
+    plt.subplot(122), plt.imshow(bounding_img, cmap='gray'), plt.title('bounding')
+    plt.show()
+
+    bounding_img2, bounding_contours, hierarchy = Contour.extract_all_countours(bounding_img)
+    for i in range(0,len(bounding_contours)):
+        Contour.write_sample(original, bounding_contours[i], str(i), (64,64))

@@ -1,82 +1,46 @@
 import os
-import sys
-from scipy.spatial import distance as dist
-from imutils import perspective
-from imutils import contours
 import numpy as np
-import imutils
 import cv2
-from Preprocessing.TTF import FontPainter as painter
 
-
-def extract_all_countours(image):
-    img = cv2.imread(image, cv2.CV_8UC1)
-    img = cv2.GaussianBlur(img, (3,3), 0);
+def open_image(filename):
+    img = cv2.imread(filename, cv2.CV_8UC1)
+    img = cv2.GaussianBlur(img, (3, 3), 0);
     img = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2)
-    cv2.bitwise_not(img, img)#important!
-    img2, contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_TC89_KCOS)
-    return img2, contours, hierarchy
+    return img
 
-def find_contour_coordinates(image, cnts, hierarchy):
-    coordinates = []
-    for c in cnts:
-        box= cv2.boundingRect(c)
-        coordinates.append([c, box])
-    return coordinates
-'''
-def write_contour(img, image, contours):
+def extract_all_countours(img):
+    cv2.bitwise_not(img, img)
+    img, contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_TC89_KCOS)
+    return img, contours, hierarchy
 
-    #x, y, w, h = cv2.boundingRect(contour)
+def draw_bounding_boxes(img, contours, hierarchy):
+    for cnt in contours:
+        x, y, w, h = cv2.boundingRect(cnt)
+        cv2.rectangle(img, (x, y), (x + w, y + h), (255, 255, 255), 1)
+    return cv2.bitwise_not(img,img)
 
-    pts1 = np.float32([x,y])
+def get_roi(img,x,y,w,h):
+    roi = img[y:y + h, x:x + w]
+    return roi
+def check_bounds(x, y, w, h):
+    div = w/h
+    if div > 0.3:
+        return False
+    else:
+        return True
+def write_sample(image, contour, name, sample_size):
 
-    #roi = img[y:y + h, x:x + w]
-    cv2.imwrite(image, [contours])
-
-    #cv2.cv2.resize()
-'''
-def get_nearest_graph(coord_cnts):
-    length = len(coord_cnts)
-    nearest = [[]] * length
-    for i in range(0, length):
-        nearest[i].append(coord_cnts[i])
-        for k in range(0, length - 1):
-            if i != k:
-                x, y, w, h = coord_cnts[i][1]
-                x1, y1, w1, h1 = coord_cnts[k][1]
-                vertical = find_vertical_distance(coord_cnts[i], coord_cnts[k])
-                horisontal = find_horisontal_distance(coord_cnts[i], coord_cnts[k])
-                if x < x1 and (x + w) < (x1 + w1):
-                    cnt_area1 = cv2.contourArea(coord_cnts[i][0])
-                    cnt_area2 = cv2.contourArea(coord_cnts[k][0])
-                    if (cnt_area1/cnt_area2) < 0.3 or (cnt_area1/cnt_area2) < 0.3:
-                        nearest[i].append(k)
-    return nearest
-
-def find_vertical_distance(coord_cnt1, coord_cnt2):
-    x,y,w,h = coord_cnt1[1]
-    x1,y1,w1,h1 = coord_cnt2[1]
-    return dist.euclidean( (x,y), (x1+w1, y1+h1) )
-
-def find_horisontal_distance(coord_cnt1, coord_cnt2):
-    x,y,w,h = coord_cnt1[1]
-    x1,y1,w1,h1 = coord_cnt2[1]
-    return dist.euclidean( (x+w,y+h), (x1, y1) )
-
-def find_min_vertical_distance(coord_cnts):
-    distances = []
-    for c in coord_cnts:
-        for k in coord_cnts:
-            distances.append(find_vertical_distance(c, k))
-    return min(distances)
-
-def find_min_horisontal_distance(coord_cnts):
-    distances = []
-    for c in coord_cnts:
-        for k in coord_cnts:
-            distances.append(find_horisontal_distance(c, k))
-    return min(distances)
-
-
-
-
+    x, y, w, h = cv2.boundingRect(contour)
+    #check_bounds()
+    roi = get_roi(image, x, y, w, h)
+    temp_name = name+"_temp_.png"
+    cv2.imwrite(temp_name, roi)
+    img = cv2.imread(temp_name,0)
+    height, width = img.shape
+    temp_img = cv2.imread(temp_name, 0)
+    pts1 = np.float32([[0, 0], [width-1, 0], [0, height-1], [width-1, height-1]])
+    pts2 = np.float32([[0, 0], [sample_size[0], 0], [0, sample_size[1]], [sample_size[0], sample_size[1]]])
+    M = cv2.getPerspectiveTransform(pts1, pts2)
+    dst = cv2.warpPerspective(temp_img, M, (sample_size[0], sample_size[1]))
+    cv2.imwrite(name+"_sample.png", dst)
+    os.remove(temp_name)

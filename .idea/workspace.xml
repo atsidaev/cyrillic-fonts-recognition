@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8b19964-0ede-437a-9aa4-5b24785d6b95" name="Default" comment="work in progress merge some contours">
+    <list default="true" id="f8b19964-0ede-437a-9aa4-5b24785d6b95" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/Contours/ContourExtractor.py" afterPath="$PROJECT_DIR$/Preprocessing/Contours/ContourExtractor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestingSampleGenerator.py" afterPath="$PROJECT_DIR$/TestingSampleGenerator.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -529,7 +527,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494677193196</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="TODO:add sort of dirt euristic for intercepted contours">
+      <created>1494703374797</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1494703374797</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -599,7 +604,8 @@
     <MESSAGE value="make distance between contours calculation" />
     <MESSAGE value="fix thing with wrong contour recognition" />
     <MESSAGE value="work in progress merge some contours" />
-    <option name="LAST_COMMIT_MESSAGE" value="work in progress merge some contours" />
+    <MESSAGE value="TODO:add sort of dirt euristic for intercepted contours" />
+    <option name="LAST_COMMIT_MESSAGE" value="TODO:add sort of dirt euristic for intercepted contours" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

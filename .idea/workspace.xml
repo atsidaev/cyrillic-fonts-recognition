@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8b19964-0ede-437a-9aa4-5b24785d6b95" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestingSampleGenerator.py" afterPath="$PROJECT_DIR$/TestingSampleGenerator.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -579,7 +577,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494710201831</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="changes in gitignore">
+      <created>1494765239788</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1494765239788</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -651,7 +656,8 @@
     <MESSAGE value="work in progress merge some contours" />
     <MESSAGE value="TODO:add sort of dirt euristic for intercepted contours" />
     <MESSAGE value="deside to drop bad recognised contours" />
-    <option name="LAST_COMMIT_MESSAGE" value="deside to drop bad recognised contours" />
+    <MESSAGE value="changes in gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes in gitignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

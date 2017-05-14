@@ -16,20 +16,20 @@ def draw_all_font_symbols(font, fontsize, image_size, output_dir):
     image = Image.new('RGBA', (image_size[0], image_size[1]), (255, 255, 255))
     draw = ImageDraw.Draw(image)
     img_font = None
-    if font.type == "TTF":
-       img_font = ImageFont.truetype(font.path, size=fontsize)
-    elif font.type == "OTF":
-       img_font = ImageFont.FreeTypeFont(font.path, size=fontsize)
+    if os.path.splitext(font)[1] == ".ttf":
+       img_font = ImageFont.truetype(font, size=fontsize)
+    elif os.path.splitext(font)[1] == ".ttf":
+       img_font = ImageFont.FreeTypeFont(font, size=fontsize)
 
     lower_letters = get_lower_cyrillic().replace("", " ")[1:-1]
     upper_letters = get_upper_cyrillic().replace("", " ")[1:-1]
     digits = get_digits().replace("", " ")[1:-1]
 
-    draw.text((64, 64), lower_letters,(0, 0, 0), font=font)
-    draw.text((64, 128), upper_letters,(0, 0, 0), font=font)
-    draw.text((64, 192), digits, (0, 0, 0), font=font)
+    draw.text((64, 64), lower_letters,(0, 0, 0), font=img_font)
+    draw.text((64, 128), upper_letters,(0, 0, 0), font=img_font)
+    draw.text((64, 192), digits, (0, 0, 0), font=img_font)
 
-    image.save(generate_name(output_dir, manipulator.get_fontname()[0], "_all"))
+    image.save(generate_name(output_dir, manipulator.get_fontname(font)[0], "_all"))
 
 def draw_text(filename, text, fontsize, image_size, output_dir):
     image = Image.new('RGBA', (image_size[0], image_size[1]),(255,255,255))
@@ -65,4 +65,4 @@ def draw_sign(filename, sign, fontsize, image_size, output_dir):
     image.save(os.path.join(output_dir, sign + "_" + os.path.basename(filename)[:-4] + ".png"))
 
 def generate_name(dir, font_name, text):
-    return os.path.join(dir, font_name, text, ".png")
+    return os.path.join(dir, font_name + text + ".png")

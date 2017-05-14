@@ -23,21 +23,18 @@ def get_roi(img,x,y,w,h):
     roi = img[y:y + h, x:x + w]
     return roi
 
-def write(image, contour, name, sample_size):
+def write_sample(image, contour, prefix, name, sample_size, sample_folder):
     x, y, w, h = cv2.boundingRect(contour)
     roi = get_roi(image, x, y, w, h)
-    temp_name = name+"_temp_.png"
+    temp_name = os.path.join(sample_folder, name + "_temp_.png")
     cv2.imwrite(temp_name, roi)
-    img = cv2.imread(temp_name,0)
+    img = cv2.imread(temp_name, 0)
     height, width = img.shape
     temp_img = cv2.imread(temp_name, 0)
-    pts1 = np.float32([[0, 0], [width-1, 0], [0, height-1], [width-1, height-1]])
+    pts1 = np.float32([[0, 0], [width - 1, 0], [0, height - 1], [width - 1, height - 1]])
     pts2 = np.float32([[0, 0], [sample_size[0], 0], [0, sample_size[1]], [sample_size[0], sample_size[1]]])
     M = cv2.getPerspectiveTransform(pts1, pts2)
     dst = cv2.warpPerspective(temp_img, M, (sample_size[0], sample_size[1]))
-    cv2.imwrite(name+"_sample.png", dst)
+    filename = os.path.join(sample_folder,prefix + "_" + name + "_sample.png")
+    cv2.imwrite(filename, dst)
     os.remove(temp_name)
-
-def write_sample(image, contour, name, sample_size):
-    x, y, w, h = cv2.boundingRect(contour)
-    write(image, contour, name, sample_size)

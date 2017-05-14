@@ -12,6 +12,7 @@ then
 	sudo mv geckodriver $HOME/.local/bin
 fi
 pip3 install selenium
+pip3 install configparser
 
 #pillow and font tools
 sudo apt-get install libjpeg-dev libfreetype6-dev zlib1g-dev

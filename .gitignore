@@ -95,3 +95,4 @@ ENV/
 *.jpg
 *.jpeg
 *config.py
+*.ini

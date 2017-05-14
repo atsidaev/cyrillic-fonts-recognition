@@ -4,12 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/TestingSampleGenerator.py" line="50" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8b19964-0ede-437a-9aa4-5b24785d6b95" name="Default" comment="TestingS">
+    <list default="true" id="f8b19964-0ede-437a-9aa4-5b24785d6b95" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ConfigGenerator.py" afterPath="$PROJECT_DIR$/ConfigGenerator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/Contours/ContourExtractor.py" afterPath="$PROJECT_DIR$/Preprocessing/Contours/ContourExtractor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/TTF/FontPainter.py" afterPath="$PROJECT_DIR$/Preprocessing/TTF/FontPainter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestingSampleGenerator.py" afterPath="$PROJECT_DIR$/TestingSampleGenerator.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -617,7 +613,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494765579532</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="TestingSampleGenerator now truly generates testing samples + add config files">
+      <created>1494784724311</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1494784724311</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -689,7 +692,8 @@
     <MESSAGE value="TODO:add sort of dirt euristic for intercepted contours" />
     <MESSAGE value="deside to drop bad recognised contours" />
     <MESSAGE value="changes in gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes in gitignore" />
+    <MESSAGE value="TestingSampleGenerator now truly generates testing samples + add config files" />
+    <option name="LAST_COMMIT_MESSAGE" value="TestingSampleGenerator now truly generates testing samples + add config files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -9,7 +9,7 @@ import cv2
 import os
 from os import listdir
 from os.path import isfile, join
-from matplotlib import pyplot as plt
+
 
 def generate_synthetic_raw_images(font_folder, sample_folder):
     files = [f for f in os.listdir(font_folder) if
@@ -21,7 +21,7 @@ def generate_synthetic_raw_images(font_folder, sample_folder):
              os.path.isfile(os.path.join(font_folder, f)) and (f.endswith(".otf") or f.endswith(".ttf"))]
     for f in files:
         fontname = os.path.join(font_folder, f)
-        painter.draw_all_font_symbols(fontname,54, (1024, 1024),sample_folder)
+        painter.draw_all_font_symbols(fontname, 40, (2048, 800), sample_folder)
 
 def generate_sample_from_image(image_name, name_prefix, sample_folder):
     image = Contour.open_image(image_name)
@@ -31,9 +31,9 @@ def generate_sample_from_image(image_name, name_prefix, sample_folder):
     bounding_img2, bounding_contours, hierarchy = Contour.extract_all_countours(bounding_img)
     for i in range(0,len(bounding_contours)):
         sample_name = str(i)
-        Contour.write_sample(original, bounding_contours[i], name_prefix, sample_name, (64,64), sample_folder)
+        Contour.write_sample(original, bounding_contours[i], name_prefix, sample_name, (32,32), sample_folder)
 
-if __name__ == "__main__":
+def generate_testing_samples(self):
     config = cp.ConfigParser()
     config.read_file(open('config.ini'))
     testingSampleFolder = config.get('Directories', 'testingsamplefolder')
@@ -56,3 +56,8 @@ if __name__ == "__main__":
         for f in files:
             prefix = f.replace(".png", "")
             generate_sample_from_image(os.path.join(rawImageFolder, f),prefix, testingSampleFolder)
+
+
+
+if __name__ == "__main__":
+    generate_testing_samples()

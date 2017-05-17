@@ -24,9 +24,11 @@
       <file leaf-file-name="DatasetGenerator.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DatasetGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="765">
+              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+              <folding>
+                <element signature="e#20#70#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,8 +107,8 @@
         <option value="$PROJECT_DIR$/TestingImageSetGenerator.py" />
         <option value="$PROJECT_DIR$/Preprocessing/TTF/FontPainter.py" />
         <option value="$PROJECT_DIR$/ConfigGenerator.py" />
-        <option value="$PROJECT_DIR$/DatasetGenerator.py" />
         <option value="$PROJECT_DIR$/Datasets/Classes.csv" />
+        <option value="$PROJECT_DIR$/DatasetGenerator.py" />
       </list>
     </option>
   </component>
@@ -665,7 +667,14 @@
       <option name="project" value="LOCAL" />
       <updated>1495045613756</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="testing images labeled">
+      <created>1495051686169</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1495051686169</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -746,7 +755,8 @@
     <MESSAGE value="TestingSampleGenerator now truly generates testing samples + add config files" />
     <MESSAGE value="Training sample generator now truly generates training image set + config" />
     <MESSAGE value="Csv generation work in progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="Csv generation work in progress" />
+    <MESSAGE value="testing images labeled" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing images labeled" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -966,9 +976,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DatasetGenerator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="765">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#20#70#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

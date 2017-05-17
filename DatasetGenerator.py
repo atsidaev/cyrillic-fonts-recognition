@@ -14,6 +14,8 @@ def generate_labeled_dataset():
     return 0
 def generate_labled_csv(image_data_folder, csvfile):
     return 0
+def image_to_feature_vector(image):
+    return image.flatten()
 
 def generate_classes_csv(raw_data_folder, csvfile):
     with open(csv_file, 'w') as csvfile:
@@ -41,9 +43,6 @@ def get_class(name, csvfile):
         for row in reader:
             if name == row['filename']:
                 return row['class']
-
-def image_to_feature_vector(image):
-    return image.flatten()
 
 
 if __name__ == "__main__":

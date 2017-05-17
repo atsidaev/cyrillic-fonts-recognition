@@ -23,7 +23,7 @@ def get_roi(img,x,y,w,h):
     roi = img[y:y + h, x:x + w]
     return roi
 
-def write_sample(image, contour, prefix, name, sample_size, sample_folder):
+def write_sample_image(image, contour, prefix, name, sample_size, sample_folder):
     x, y, w, h = cv2.boundingRect(contour)
     roi = get_roi(image, x, y, w, h)
     temp_name = os.path.join(sample_folder, name + "_temp_.png")

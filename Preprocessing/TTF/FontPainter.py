@@ -29,16 +29,14 @@ def draw_all_font_symbols(font, fontsize, image_size, output_dir):
     draw.text((64, 128), upper_letters,(0, 0, 0), font=img_font)
     draw.text((64, 192), digits, (0, 0, 0), font=img_font)
 
-    image.save(generate_name(output_dir, manipulator.get_fontname(font)[0], "_all"))
+    image.save(generate_name(output_dir, manipulator.get_fontname(font)[0], "")) #"_all"))
 
 def draw_text(filename, text, fontsize, image_size, output_dir):
     image = Image.new('RGBA', (image_size[0], image_size[1]),(255,255,255))
     draw = ImageDraw.Draw(image)
     draw_font = None
-
     file, extension = os.path.splitext(filename)
     extension = extension.lower()
-
     if extension == ".ttf":
        draw_font = ImageFont.truetype(filename, size=fontsize)
     elif extension == ".otf":
@@ -47,7 +45,7 @@ def draw_text(filename, text, fontsize, image_size, output_dir):
     draw.text((64, 64), text,(0, 0, 0), font=draw_font)
 
     image.save(generate_name(output_dir, manipulator.get_fontname()[0], "sample"))
-#have to test
+
 def draw_sign(filename, sign, fontsize, image_size, output_dir):
     image = Image.new('RGBA', (image_size[0], image_size[1]),(255,255,255))
     draw = ImageDraw.Draw(image)

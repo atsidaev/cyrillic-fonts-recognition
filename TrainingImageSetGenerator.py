@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import TestingSampleGenerator as tsg
+import TestingImageSetGenerator as tsg
 import Preprocessing.Contours.ContourExtractor as Contour
 import Preprocessing.TTF.FontPainter as painter
 import Preprocessing.TTF.FontManipulator as fontmanip
@@ -8,7 +8,7 @@ import configparser as cp
 import os
 
 
-def generate_learning_samples():
+def generate_learning_images():
     config = cp.ConfigParser()
     config.read_file(open('config.ini'))
     learningSampleFolder = config.get('Directories', 'learningsamplefolder')
@@ -33,4 +33,4 @@ def generate_learning_samples():
             os.remove(os.path.join(learningSampleFolder, i))
 
 if __name__ == "__main__":
-    generate_learning_samples()
+    generate_learning_images()

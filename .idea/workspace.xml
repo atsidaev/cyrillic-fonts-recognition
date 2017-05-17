@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/TestingSampleGenerator.py" line="50" />
+    <bookmark url="file://$PROJECT_DIR$/TestingImageSetGenerator.py" line="50" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8b19964-0ede-437a-9aa4-5b24785d6b95" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DatasetGenerator.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TestingSampleGenerator.py" afterPath="$PROJECT_DIR$/TestingImageSetGenerator.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TrainingSampleGenerator.py" afterPath="$PROJECT_DIR$/TrainingImageSetGenerator.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestingSampleGenerator.py" afterPath="$PROJECT_DIR$/TestingSampleGenerator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TrainingSampleGenerator.py" afterPath="$PROJECT_DIR$/TrainingSampleGenerator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ConfigGenerator.py" afterPath="$PROJECT_DIR$/ConfigGenerator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/Contours/ContourExtractor.py" afterPath="$PROJECT_DIR$/Preprocessing/Contours/ContourExtractor.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/TTF/FontPainter.py" afterPath="$PROJECT_DIR$/Preprocessing/TTF/FontPainter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deps_setup.sh" afterPath="$PROJECT_DIR$/deps_setup.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,25 +27,13 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TrainingSampleGenerator.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TrainingSampleGenerator.py">
+      <file leaf-file-name="DatasetGenerator.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DatasetGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="425">
+              <caret line="33" column="3" lean-forward="false" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
               <folding>
-                <element signature="e#19#55#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestingSampleGenerator.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TestingSampleGenerator.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="33" column="93" lean-forward="false" selection-start-line="33" selection-start-column="93" selection-end-line="33" selection-end-column="93" />
-              <folding>
-                <element signature="e#20#77#0" expanded="true" />
+                <element signature="e#20#70#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -49,8 +42,18 @@
       <file leaf-file-name="config.ini" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="20" />
+            <state relative-caret-position="85">
+              <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TrainingImageSetGenerator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TrainingImageSetGenerator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="22" column="139" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="139" />
               <folding />
             </state>
           </provider>
@@ -88,16 +91,19 @@
         <option value="$PROJECT_DIR$/Preprocessing/TTF/Font.py" />
         <option value="$PROJECT_DIR$/Preprocessing/TTF/FontManipulator.py" />
         <option value="$PROJECT_DIR$/TrainingGenerator.py" />
-        <option value="$PROJECT_DIR$/deps_setup.sh" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/ConfigGenerator.py" />
         <option value="$PROJECT_DIR$/Preprocessing/TestingSampleGenerator.py" />
         <option value="$PROJECT_DIR$/ConfigReader.py" />
-        <option value="$PROJECT_DIR$/Preprocessing/Contours/ContourExtractor.py" />
         <option value="$PROJECT_DIR$/GenerateDefaultConfig.py" />
-        <option value="$PROJECT_DIR$/Preprocessing/TTF/FontPainter.py" />
         <option value="$PROJECT_DIR$/TrainingSampleGenerator.py" />
         <option value="$PROJECT_DIR$/TestingSampleGenerator.py" />
+        <option value="$PROJECT_DIR$/Preprocessing/Contours/ContourExtractor.py" />
+        <option value="$PROJECT_DIR$/deps_setup.sh" />
+        <option value="$PROJECT_DIR$/TrainingImageSetGenerator.py" />
+        <option value="$PROJECT_DIR$/TestingImageSetGenerator.py" />
+        <option value="$PROJECT_DIR$/Preprocessing/TTF/FontPainter.py" />
+        <option value="$PROJECT_DIR$/ConfigGenerator.py" />
+        <option value="$PROJECT_DIR$/DatasetGenerator.py" />
       </list>
     </option>
   </component>
@@ -218,6 +224,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cyrillic-font-recognition" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cyrillic-font-recognition" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LearningSamples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cyrillic-font-recognition" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cyrillic-font-recognition" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Datasets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -251,42 +285,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.TrainingGenerator">
-    <configuration default="false" name="TTFPreprocessor" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="cyrillic-font-recognition" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Preprocessing/TTF/FontManipulator.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="SampleExtractor" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="cyrillic-font-recognition" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Preprocessing/Contours/ContourExtractor.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="TrainingGenerator" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -299,7 +297,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="cyrillic-font-recognition" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TrainingSampleGenerator.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TrainingImageSetGenerator.py" />
       <option name="PARAMETERS" value="&quot;test1&quot;  &quot;test2&quot;" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -317,7 +315,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="cyrillic-font-recognition" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TestingSampleGenerator.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TestingImageSetGenerator.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -336,6 +334,39 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="cyrillic-font-recognition" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ConfigGenerator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in TestingImageSetGenerator.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="cyrillic-font-recognition" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/TestingImageSetGenerator.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="false" name="DatasetGenerator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="cyrillic-font-recognition" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DatasetGenerator.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -438,19 +469,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.TTFPreprocessor" />
-      <item index="1" class="java.lang.String" itemvalue="Python.SampleExtractor" />
-      <item index="2" class="java.lang.String" itemvalue="Python.TrainingGenerator" />
-      <item index="3" class="java.lang.String" itemvalue="Python.TestingSampleGenerator" />
-      <item index="4" class="java.lang.String" itemvalue="Python.GenerateDefaultConfig" />
+      <item index="0" class="java.lang.String" itemvalue="Python.TrainingGenerator" />
+      <item index="1" class="java.lang.String" itemvalue="Python.TestingSampleGenerator" />
+      <item index="2" class="java.lang.String" itemvalue="Python.GenerateDefaultConfig" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in TestingImageSetGenerator.py" />
+      <item index="4" class="java.lang.String" itemvalue="Python.DatasetGenerator" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.TrainingGenerator" />
-        <item index="1" class="java.lang.String" itemvalue="Python.TestingSampleGenerator" />
+        <item index="1" class="java.lang.String" itemvalue="Python.DatasetGenerator" />
         <item index="2" class="java.lang.String" itemvalue="Python.GenerateDefaultConfig" />
-        <item index="3" class="java.lang.String" itemvalue="Python.SampleExtractor" />
-        <item index="4" class="java.lang.String" itemvalue="Python.TTFPreprocessor" />
+        <item index="3" class="java.lang.String" itemvalue="Python.TestingSampleGenerator" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in TestingImageSetGenerator.py" />
       </list>
     </recent_temporary>
     <configuration default="true" type="tests" factoryName="Attests">
@@ -631,8 +662,20 @@
       <option name="project" value="LOCAL" />
       <updated>1494784733559</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Training sample generator now truly generates training image set + config">
+      <created>1494961210200</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1494961210200</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_in_TestingImageSetGenerator_py - 2017.05.17 at 19h 04m 46s.xml">
+      <configuration name="Unittests in TestingImageSetGenerator.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -647,9 +690,10 @@
     <frame x="-3" y="32" width="1286" height="946" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2924071" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30210015" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296837" sideWeight="0.47415185" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5323102" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.4838449" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32967034" sideWeight="0.4676898" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296837" sideWeight="0.49030694" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296837" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -663,7 +707,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.4838449" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -705,7 +748,8 @@
     <MESSAGE value="deside to drop bad recognised contours" />
     <MESSAGE value="changes in gitignore" />
     <MESSAGE value="TestingSampleGenerator now truly generates testing samples + add config files" />
-    <option name="LAST_COMMIT_MESSAGE" value="TestingSampleGenerator now truly generates testing samples + add config files" />
+    <MESSAGE value="Training sample generator now truly generates training image set + config" />
+    <option name="LAST_COMMIT_MESSAGE" value="Training sample generator now truly generates training image set + config" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -716,7 +760,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="76" />
+      <option name="time" value="81" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -725,16 +769,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/7_sample.png" />
-    <entry file="file://$PROJECT_DIR$/9_sample.png" />
-    <entry file="file://$PROJECT_DIR$/75_sample.png" />
-    <entry file="file://$PROJECT_DIR$/77_sample.png" />
-    <entry file="file://$PROJECT_DIR$/79_sample.png" />
-    <entry file="file://$PROJECT_DIR$/82_sample.png" />
-    <entry file="file://$PROJECT_DIR$/10_sample.png" />
-    <entry file="file://$PROJECT_DIR$/12_sample.png" />
-    <entry file="file://$PROJECT_DIR$/26_sample.png" />
-    <entry file="file://$PROJECT_DIR$/32_sample.png" />
     <entry file="file://$PROJECT_DIR$/38_sample.png" />
     <entry file="file://$PROJECT_DIR$/5_sample.png" />
     <entry file="file://$PROJECT_DIR$/14_sample.png" />
@@ -748,13 +782,6 @@
     <entry file="file://$PROJECT_DIR$/13_temp_.png" />
     <entry file="file://$PROJECT_DIR$/4_temp_.png" />
     <entry file="file://$PROJECT_DIR$/6_sample.png" />
-    <entry file="file://$PROJECT_DIR$/deps_setup.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="667">
@@ -798,94 +825,126 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.ini">
+    <entry file="file://$PROJECT_DIR$/LearningSamples/5_Astakhov First One Stripe.png" />
+    <entry file="file://$PROJECT_DIR$/LearningSamples/0_A&amp;S Porkchop Primitive Cyrillic Bold.png" />
+    <entry file="file://$PROJECT_DIR$/LearningSamples/0_A&amp;S Porkchop Primitive Cyrillic Bold.png_0_sample.png" />
+    <entry file="file://$PROJECT_DIR$/LearningSamples/0_Astakhov Dished.png_0_sample.png" />
+    <entry file="file://$PROJECT_DIR$/LearningSamples/0_Astakhov Dished.png" />
+    <entry file="file://$PROJECT_DIR$/LearningSamples/0_Astakhov First One Stripe.png" />
+    <entry file="file://$PROJECT_DIR$/LearningSamples/0_Astakhov First One Stripe.png_0_sample.png" />
+    <entry file="file://$PROJECT_DIR$/LearningSamples/0_Bukyvede.png_0_sample.png" />
+    <entry file="file://$PROJECT_DIR$/Preprocessing/TTF/FontManipulator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="20" />
+        <state relative-caret-position="782">
+          <caret line="49" column="14" lean-forward="false" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deps_setup.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ConfigGenerator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="87" lean-forward="false" selection-start-line="14" selection-start-column="87" selection-end-line="14" selection-end-column="87" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/LearningSamples/Ё_PFHandbookPro-Thin_0_sample.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LearningSamples/5_Astakhov First One Stripe.png">
+    <entry file="file://$PROJECT_DIR$/LearningSamples/ё_PFHandbookPro-Thin_0_sample.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestingSamples/A&amp;S Porkchop Primitive Cyrillic Bold_all_72_sample.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestingSamples/Ice kingdom (Frozen) Cyrillic Bold_all_72_sample.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RawImages/A&amp;S Porkchop Primitive Cyrillic Bold.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestingSamples/Astakhov First One Stripe_60_sample.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Preprocessing/TTF/FontPainter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        <state relative-caret-position="340">
+          <caret line="31" column="80" lean-forward="false" selection-start-line="31" selection-start-column="80" selection-end-line="31" selection-end-column="80" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LearningSamples/0_A&amp;S Porkchop Primitive Cyrillic Bold_0_sample.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Preprocessing/Contours/ContourExtractor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="341">
+          <caret line="37" column="65" lean-forward="false" selection-start-line="37" selection-start-column="65" selection-end-line="37" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LearningSamples/0_A&amp;S Porkchop Primitive Cyrillic Bold.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LearningSamples/0_A&amp;S Porkchop Primitive Cyrillic Bold.png_0_sample.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LearningSamples/0_Astakhov Dished.png_0_sample.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LearningSamples/0_Astakhov Dished.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LearningSamples/0_Astakhov First One Stripe.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LearningSamples/0_Astakhov First One Stripe.png_0_sample.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LearningSamples/0_Bukyvede.png_0_sample.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TrainingSampleGenerator.py">
+    <entry file="file://$PROJECT_DIR$/ConfigGenerator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="e#19#55#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="306">
+          <caret line="19" column="90" lean-forward="true" selection-start-line="19" selection-start-column="90" selection-end-line="19" selection-end-column="90" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestingSampleGenerator.py">
+    <entry file="file://$PROJECT_DIR$/TestingImageSetGenerator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="33" column="93" lean-forward="false" selection-start-line="33" selection-start-column="93" selection-end-line="33" selection-end-column="93" />
+        <state relative-caret-position="561">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrainingImageSetGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="22" column="139" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="139" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Datasets/Classes.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DatasetGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="33" column="3" lean-forward="false" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
           <folding>
-            <element signature="e#20#77#0" expanded="true" />
+            <element signature="e#20#70#0" expanded="true" />
           </folding>
         </state>
       </provider>

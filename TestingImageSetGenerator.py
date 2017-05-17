@@ -31,9 +31,9 @@ def generate_sample_from_image(image_name, name_prefix, sample_folder):
     bounding_img2, bounding_contours, hierarchy = Contour.extract_all_countours(bounding_img)
     for i in range(0,len(bounding_contours)):
         sample_name = str(i)
-        Contour.write_sample(original, bounding_contours[i], name_prefix, sample_name, (32,32), sample_folder)
+        Contour.write_sample_image(original, bounding_contours[i], name_prefix, sample_name, (32, 32), sample_folder)
 
-def generate_testing_samples(self):
+def generate_testing_samples():
     config = cp.ConfigParser()
     config.read_file(open('config.ini'))
     testingSampleFolder = config.get('Directories', 'testingsamplefolder')

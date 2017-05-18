@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-import TestingImageSetGenerator as tsg
-import Preprocessing.TTF.FontPainter as painter
-import Preprocessing.TTF.FontManipulator as fontmanip
 import configparser as cp
-import Preprocessing.Other.FileHelper as fh
-
 import os
+
+import Preprocessing.Other.FileHelper as fh
+import Preprocessing.TTF.FontManipulator as fontmanip
+import Preprocessing.TTF.FontPainter as painter
+from Preprocessing.ImageSet import TestingImageSetGenerator as tsg
 
 
 def generate_learning_images():

@@ -30,7 +30,7 @@ def write_sample_image(image, contour, prefix, name, sample_size, sample_folder)
     cv2.imwrite(temp_name, roi)
     img = cv2.imread(temp_name, 0)
     height, width = img.shape
-    temp_img = cv2.imread(temp_name, 0)
+    temp_img = cv2.imread(temp_name, 1)
     pts1 = np.float32([[0, 0], [width - 1, 0], [0, height - 1], [width - 1, height - 1]])
     pts2 = np.float32([[0, 0], [sample_size[0], 0], [0, sample_size[1]], [sample_size[0], sample_size[1]]])
     M = cv2.getPerspectiveTransform(pts1, pts2)

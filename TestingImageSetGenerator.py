@@ -25,7 +25,7 @@ def generate_synthetic_raw_images(font_folder, sample_folder):
 
 def generate_sample_from_image(image_name, name_prefix, sample_folder):
     image = Contour.open_image(image_name)
-    original = cv2.imread(image_name, cv2.CV_8UC1)
+    original = cv2.imread(image_name, 1)
     img, contours, hierarchy = Contour.extract_all_countours(image)
     bounding_img = Contour.draw_bounding_boxes(img, contours, hierarchy)
     bounding_img2, bounding_contours, hierarchy = Contour.extract_all_countours(bounding_img)

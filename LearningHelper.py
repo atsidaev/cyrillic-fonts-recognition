@@ -10,16 +10,13 @@ import cv2
 import os
 import csv
 
-def generate_labeled_dataset():
-    return 0
-def generate_labled_csv(image_data_folder, csvfile):
-    return 0
+
 def image_to_feature_vector(image):
     return image.flatten()
 
 def generate_classes_csv(raw_data_folder, csvfile):
     with open(csv_file, 'w') as csvfile:
-        fieldnames = ['filename', 'class']
+        fieldnames = ['filename', 'class']#,'labels']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         files = [f for f in os.listdir(raw_data_folder) if

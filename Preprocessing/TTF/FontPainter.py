@@ -30,7 +30,7 @@ def draw_all_font_symbols(font, fontsize, image_size, output_dir):
     draw.text((64, 192), digits, (0, 0, 0), font=img_font)
 
     image.save(generate_name(output_dir, manipulator.get_fontname(font)[0], "")) #"_all"))
-
+#TODO:color changing
 def draw_text(filename, text, fontsize, image_size, output_dir):
     image = Image.new('RGBA', (image_size[0], image_size[1]),(255,255,255))
     draw = ImageDraw.Draw(image)

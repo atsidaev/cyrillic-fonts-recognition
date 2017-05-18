@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 import TestingImageSetGenerator as tsg
-import Preprocessing.Contours.ContourExtractor as Contour
 import Preprocessing.TTF.FontPainter as painter
 import Preprocessing.TTF.FontManipulator as fontmanip
 import configparser as cp
+import Preprocessing.Other.FileHelper as fh
 
 import os
 
@@ -15,10 +15,7 @@ def generate_learning_images():
     ttfData = config.get('Directories', 'ttfdata')
 
     if not os.path.exists(learningSampleFolder) or not os.path.exists(ttfData):
-        if not os.path.exists(learningSampleFolder):
-            os.makedirs(learningSampleFolder)
-        if not os.path.exists(ttfData):
-            os.makedirs(ttfData)
+        fh.check_and_generate_folders([learningSampleFolder, ttfData])
     else:
         files = [f for f in os.listdir(ttfData) if os.path.isfile(os.path.join(ttfData, f)) and (f.endswith(".otf") or f.endswith(".ttf"))]
         s = ""

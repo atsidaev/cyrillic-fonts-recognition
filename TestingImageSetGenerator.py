@@ -3,12 +3,14 @@
 import Preprocessing.Contours.ContourExtractor as Contour
 import Preprocessing.TTF.FontPainter as painter
 import Preprocessing.TTF.FontManipulator as fontmanip
+import Preprocessing.Other.FileHelper as fh
 import configparser as cp
 import io
 import cv2
 import os
 from os import listdir
 from os.path import isfile, join
+
 
 
 def generate_synthetic_raw_images(font_folder, sample_folder):
@@ -41,12 +43,7 @@ def generate_testing_samples():
     ttfData = config.get('Directories', 'ttfdata')
 
     if not os.path.exists(testingSampleFolder) or not os.path.exists(rawImageFolder) or not os.path.exists(ttfData):
-        if not os.path.exists(testingSampleFolder):
-            os.makedirs(testingSampleFolder)
-        if not os.path.exists(rawImageFolder):
-            os.makedirs(rawImageFolder)
-        if not os.path.exists(ttfData):
-            os.makedirs(ttfData)
+        fh.check_and_generate_folders([testingSampleFolder, rawImageFolder, ttfData])
     else:
         files = [f for f in listdir(rawImageFolder) if isfile(join(rawImageFolder, f)) and os.path.splitext(f)[1] == ".png"]
         if len(files) == 0:

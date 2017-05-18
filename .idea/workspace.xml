@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8b19964-0ede-437a-9aa4-5b24785d6b95" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PrepareDataset.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Preprocessing/ImageSet/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ConfigGenerator.py" afterPath="$PROJECT_DIR$/Preprocessing/Other/ConfigGenerator.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/LableHelper.py" afterPath="$PROJECT_DIR$/Preprocessing/ImageSet/LabelTrainingSet.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/LearningImageSetGenerator.py" afterPath="$PROJECT_DIR$/Preprocessing/ImageSet/LearningImageSetGenerator.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TestingImageSetGenerator.py" afterPath="$PROJECT_DIR$/Preprocessing/ImageSet/TestingImageSetGenerator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,7 +21,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LabelTrainingSet.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LabelTrainingSet.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Preprocessing/ImageSet/LabelTrainingSet.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="292">
@@ -34,6 +29,16 @@
               <folding>
                 <element signature="e#20#63#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="409">
+              <caret line="98" column="5" lean-forward="false" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,7 +123,6 @@
         <option value="$PROJECT_DIR$/Preprocessing/TTF/Font.py" />
         <option value="$PROJECT_DIR$/Preprocessing/TTF/FontManipulator.py" />
         <option value="$PROJECT_DIR$/TrainingGenerator.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Preprocessing/TestingSampleGenerator.py" />
         <option value="$PROJECT_DIR$/ConfigReader.py" />
         <option value="$PROJECT_DIR$/GenerateDefaultConfig.py" />
@@ -143,6 +147,7 @@
         <option value="$PROJECT_DIR$/Preprocessing/Other/ConfigGenerator.py" />
         <option value="$PROJECT_DIR$/PrepareDataset.py" />
         <option value="$PROJECT_DIR$/Preprocessing/ImageSet/LabelTrainingSet.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -694,7 +699,14 @@
       <option name="project" value="LOCAL" />
       <updated>1495110977329</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="replace some files to packages">
+      <created>1495115985561</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1495115985561</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -716,8 +728,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="32" width="1282" height="948" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21799028" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21799028" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886723" sideWeight="0.47415185" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5323102" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886723" sideWeight="0.4838449" order="1" side_tool="false" content_ui="tabs" />
@@ -781,7 +794,8 @@
     <MESSAGE value="testing images labeled" />
     <MESSAGE value="fix colour issue" />
     <MESSAGE value="fix data samples dirs generation" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix data samples dirs generation" />
+    <MESSAGE value="replace some files to packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="replace some files to packages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -801,7 +815,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LearningSamples/326_7.png" />
     <entry file="file://$PROJECT_DIR$/LearningSamples/329_9.png" />
     <entry file="file://$PROJECT_DIR$/LearningSamples/1_Astakhov First One Stripe_0_sample.png" />
     <entry file="file://$PROJECT_DIR$/LearningSamples/1_A&amp;S Porkchop Primitive Cyrillic Bold_0_sample.png" />
@@ -992,6 +1005,14 @@
           <folding>
             <element signature="e#20#63#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="98" column="5" lean-forward="false" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

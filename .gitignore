@@ -96,3 +96,4 @@ ENV/
 *.jpeg
 *config.py
 *.ini
+*.csv

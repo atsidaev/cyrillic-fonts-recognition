@@ -97,3 +97,4 @@ ENV/
 *config.py
 *.ini
 *.csv
+*.sav

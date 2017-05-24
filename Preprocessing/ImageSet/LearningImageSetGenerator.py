@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import configparser as cp
 import os
-
+import sys
 import Preprocessing.Other.FileHelper as fh
 import Preprocessing.TTF.FontManipulator as fontmanip
 import Preprocessing.TTF.FontPainter as painter
@@ -17,6 +17,7 @@ def generate_learning_images():
     if not os.path.exists(learningSampleFolder) or not os.path.exists(ttfData):
         fh.check_and_generate_folders([learningSampleFolder, ttfData])
     else:
+        print("Learning images generation...")
         files = [f for f in os.listdir(ttfData) if os.path.isfile(os.path.join(ttfData, f)) and (f.endswith(".otf") or f.endswith(".ttf"))]
         s = ""
         text = s.join((painter.get_lower_cyrillic(), painter.get_upper_cyrillic(), painter.get_digits()))

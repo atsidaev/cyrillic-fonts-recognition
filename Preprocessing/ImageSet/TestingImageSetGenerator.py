@@ -7,6 +7,7 @@ import Preprocessing.Other.FileHelper as fh
 import configparser as cp
 import io
 import cv2
+import sys
 import os
 from os import listdir
 from os.path import isfile, join
@@ -45,6 +46,7 @@ def generate_testing_samples():
     if not os.path.exists(testingSampleFolder) or not os.path.exists(rawImageFolder) or not os.path.exists(ttfData):
         fh.check_and_generate_folders([testingSampleFolder, rawImageFolder, ttfData])
     else:
+        print("Testing images generation...")
         files = [f for f in listdir(rawImageFolder) if isfile(join(rawImageFolder, f)) and os.path.splitext(f)[1] == ".png"]
         if len(files) == 0:
             generate_synthetic_raw_images(ttfData, rawImageFolder)
@@ -53,8 +55,6 @@ def generate_testing_samples():
         for f in files:
             prefix = f.replace(".png", "")
             generate_sample_from_image(os.path.join(rawImageFolder, f),prefix, testingSampleFolder)
-
-
 
 if __name__ == "__main__":
     generate_testing_samples()

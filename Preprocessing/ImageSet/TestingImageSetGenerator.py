@@ -43,6 +43,10 @@ def generate_testing_samples():
     rawImageFolder = config.get('Directories', 'rawimagefolder')
     ttfData = config.get('Directories', 'ttfdata')
 
+    is_labled = config.get("Datasets","istestingsetlabled")
+    if is_labled == "True":
+        return
+
     if not os.path.exists(testingSampleFolder) or not os.path.exists(rawImageFolder) or not os.path.exists(ttfData):
         fh.check_and_generate_folders([testingSampleFolder, rawImageFolder, ttfData])
     else:

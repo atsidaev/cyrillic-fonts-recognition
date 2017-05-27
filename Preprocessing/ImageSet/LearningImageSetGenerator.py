@@ -13,7 +13,9 @@ def generate_learning_images():
     config.read_file(open('config.ini'))
     learningSampleFolder = config.get('Directories', 'learningsamplefolder')
     ttfData = config.get('Directories', 'ttfdata')
-
+    is_labled = config.get("Datasets","istrainingsetlabled")
+    if is_labled == "True":
+        return
     if not os.path.exists(learningSampleFolder) or not os.path.exists(ttfData):
         fh.check_and_generate_folders([learningSampleFolder, ttfData])
     else:

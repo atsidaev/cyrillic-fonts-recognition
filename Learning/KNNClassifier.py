@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn import preprocessing
-from sklearn.model_selection import train_test_split
 import Learning.LearningUtility as LU
 import numpy as np
 import pickle
@@ -15,10 +13,15 @@ def train_knn_classifier():
     config.read_file(open('config.ini'))
 
     train_set_folder = config.get("Directories", "learningsamplefolder")
-
     pix, feat, lab = read_dataset(train_set_folder)
-    #here to fix
-    model = KNeighborsClassifier(n_neighbors=33, weights='uniform', algorithm='kd_tree', metric='minkowski',p=2)
+
+    n_neighbors_count = config.get("KNNSettings", "Neighbours")
+    weights = config.get("KNNSettings", "Weights")
+    algorithm = config.get("KNNSettings", "Algorithm")
+    metric = config.get("KNNSettings", "Metric")
+    power = config.get("KNNSettings", "PowerParameter")
+
+    model = KNeighborsClassifier(n_neighbors=int(n_neighbors_count), weights=weights, algorithm=algorithm, metric=metric, p=int(power))
     model.fit(pix, lab)
 
     filename = config.get("Models", "knnmodel")

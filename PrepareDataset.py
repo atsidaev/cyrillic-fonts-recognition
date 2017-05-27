@@ -7,7 +7,6 @@ import Preprocessing.ImageSet.LabelSet as label
 import Learning.KNNClassifier as knn
 
 def prepare_dataset():
-    CnfGen.generate_default_config()
     learning.generate_learning_images()
     testing.generate_testing_samples()
     label.label_training_set()
@@ -15,6 +14,7 @@ def prepare_dataset():
 
 
 if __name__ == "__main__":
+    CnfGen.generate_default_config()
     prepare_dataset()
     file = knn.train_knn_classifier()
     knn.test_knn_classifier()

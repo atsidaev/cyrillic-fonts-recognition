@@ -37,7 +37,12 @@ def generate_default_config():
         Config.set('Models', 'KnnModel', os.path.join(os.getcwd(), "Models", "KNN_model.sav"))
 
         Config.add_section("KNNSettings")
-        #добавить настройки обучения
+        Config.set("KNNSettings", "Neighbours", str(33))
+        Config.set("KNNSettings", "Weights", "distance")
+        Config.set("KNNSettings", "Algorithm", "kd_tree")
+        Config.set("KNNSettings", "LeafSize", str(30))
+        Config.set("KNNSettings", "Metric", "minkowski")
+        Config.set("KNNSettings", "PowerParameter", str(2))
 
         Config.write(cfgfile)
         cfgfile.close()

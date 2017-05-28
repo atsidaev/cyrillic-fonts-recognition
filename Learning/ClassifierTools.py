@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-
+import configparser as cp
 import numpy as np
-import argparse
+import pickle
 import imutils
 import cv2
 import os
@@ -34,3 +34,12 @@ def read_dataset(dataset):
     pixels = np.array(pixels)
     lables = np.array(lables)
     return pixels,lables
+
+def save_model(model, name):
+    config = cp.ConfigParser()
+    config.read_file(open('config.ini'))
+    filename = config.get("Models", name)
+    if not os.path.exists(os.path.dirname(filename)):
+        os.makedirs(os.path.dirname(filename))
+    pickle.dump(model, open(filename, 'wb'))
+    print(name, "saved.")

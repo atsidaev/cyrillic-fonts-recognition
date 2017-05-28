@@ -30,11 +30,9 @@ def generate_default_config():
         Config.set('Datasets', 'IsTrainingSetLabled', "False")
         Config.set('Datasets', 'IsTestingSetLabled', "False")
 
-        #Config.add_section("DatasetSettings")
-        #TODO: добавить настройки генерации выборки
-
         Config.add_section("Models")
-        Config.set('Models', 'KnnModel', os.path.join(os.getcwd(), "Models", "KNN_model.sav"))
+        Config.set('Models', 'KNNModel', os.path.join(os.getcwd(), "Models", "KNN_model.sav"))
+        Config.set('Models', 'SVMModel', os.path.join(os.getcwd(), "Models", "SVM_model.sav"))
 
         Config.add_section("KNNSettings")
         Config.set("KNNSettings", "Neighbours", str(33))
@@ -43,6 +41,22 @@ def generate_default_config():
         Config.set("KNNSettings", "LeafSize", str(30))
         Config.set("KNNSettings", "Metric", "minkowski")
         Config.set("KNNSettings", "PowerParameter", str(2))
+
+        Config.add_section("SVMSettings")
+        Config.set("SVMSettings", "C", str(1.0))
+        Config.set("SVMSettings", "cache_size", str(200))
+        Config.set("SVMSettings", "class_weight", "None")
+        Config.set("SVMSettings", "coef0", str(0.0))
+        Config.set("SVMSettings", "decision_function_shape", "ovo")
+        Config.set("SVMSettings", "degree", str(3))
+        Config.set("SVMSettings", "gamma", "auto")
+        Config.set("SVMSettings", "kernel", "rbf")
+        Config.set("SVMSettings", "max_iter", str(-1))
+        Config.set("SVMSettings", "probability", "False")
+        Config.set("SVMSettings", "random_state", "None")
+        Config.set("SVMSettings", "shrinking", "True")
+        Config.set("SVMSettings", "tol", "0.001")
+        Config.set("SVMSettings", "verbose", "False")
 
         Config.write(cfgfile)
         cfgfile.close()

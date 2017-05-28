@@ -18,7 +18,7 @@ def draw_all_font_symbols(font, fontsize, image_size, output_dir):
     img_font = None
     if os.path.splitext(font)[1] == ".ttf":
        img_font = ImageFont.truetype(font, size=fontsize)
-    elif os.path.splitext(font)[1] == ".ttf":
+    elif os.path.splitext(font)[1] == ".otf":
        img_font = ImageFont.FreeTypeFont(font, size=fontsize)
 
     lower_letters = get_lower_cyrillic().replace("", " ")[1:-1]

@@ -56,6 +56,10 @@ def normalize_ttf_filename(filename):
     file, extension = os.path.splitext(filename)
     os.rename(filename, os.path.join(os.path.dirname(filename), x + extension))
 
+def normalize_ttf_folder(foldername):
+    for filename in os.listdir(foldername):
+        normalize_ttf_filename(os.path.join(foldername, filename))
+
 def remove_non_cyrillic_fonts(directory_path):
     for filename in enumerate(os.listdir(directory_path)):
         if not check_cyrillic_symbols(directory_path + "/" + filename[1]):

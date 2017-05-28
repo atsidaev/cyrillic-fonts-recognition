@@ -1,11 +1,19 @@
 #!/usr/bin/python3
 
 import Preprocessing.Other.FileHelper as fh
+import Preprocessing.TTF.FontManipulator as fm
 import configparser as cp
 import Preprocessing.Other.ConfigGenerator as cfgen
 import os
 import csv
 import sys
+
+def normalize_ttf_lable():
+    cnf = cp.ConfigParser()
+    cnf.read_file(open('config.ini'))
+    folder = cnf.get("Directories", "TTFData")
+    fm.normalize_ttf_folder(folder)
+
 
 
 def label_files(image_data_folder, csvfile, istesting = True):
@@ -34,8 +42,9 @@ def label_files(image_data_folder, csvfile, istesting = True):
     for i in range(0, len(files)):
         filename = files[i].split("_")
         file_class = get_class(filename[chunk], csvfile)
-        new_name = os.path.join(image_data_folder, str(i) + "_" + file_class + ".png")
-        os.rename(os.path.join(image_data_folder, files[i]), new_name)
+        if not file_class == None:
+            new_name = os.path.join(image_data_folder, str(i) + "_" + file_class + ".png")
+            os.rename(os.path.join(image_data_folder, files[i]), new_name)
 
     if istesting == True:
         cfgen.change_cfg_value("Datasets", 'IsTestingSetLabled', "True")

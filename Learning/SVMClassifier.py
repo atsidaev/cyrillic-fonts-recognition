@@ -34,7 +34,7 @@ def train_classifier():
     train_set_folder = config.get("Directories", "learningsamplefolder")
 
     features, labels = tools.read_dataset(train_set_folder)
-
+    features = tools.normalize_set(features)
     c, cache_size, class_weight, coef0, decision_function_shape, degree, gamma, kernel, max_iter, probability, random_state, shrinking, tol, verbose = read_parameters()
     classifier = svm.SVC(C=c, cache_size=cache_size, class_weight=class_weight, coef0=coef0,
                          decision_function_shape=decision_function_shape, degree=degree, gamma=gamma, kernel=kernel,
@@ -50,8 +50,7 @@ def test_classifier():
     filename = config.get("Models", "SVMModel")
     test_set_folder = config.get("Directories", "testingsamplefolder")
     features, labels = tools.read_dataset(test_set_folder)
-
+    features = tools.normalize_set(features)
     loaded_model = pickle.load(open(filename, 'rb'))
-
     result = loaded_model.score(features, labels)
-    print("Occurancy for SVM:", result, "%")
+    print("Accurancy for SVM:", result*100, "%")

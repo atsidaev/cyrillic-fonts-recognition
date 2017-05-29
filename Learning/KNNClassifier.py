@@ -22,6 +22,9 @@ def train_classifier():
 
     train_set_folder = config.get("Directories", "learningsamplefolder")
     features, labels = tools.read_dataset(train_set_folder)
+    #TODO:проверить
+    features = tools.normalize_set(features)
+
     n_neighbors_count, weights, algorithm, metric, power = read_parameters()
 
     model = KNeighborsClassifier(n_neighbors=int(n_neighbors_count), weights=weights, algorithm=algorithm,
@@ -36,6 +39,9 @@ def test_classifier():
     filename = config.get("Models", "knnmodel")
     test_set_folder = config.get("Directories", "testingsamplefolder")
     features, labels = tools.read_dataset(test_set_folder)
+
+    features = tools.normalize_set(features)
+
     loaded_model = pickle.load(open(filename, 'rb'))
     result = loaded_model.score(features, labels)
-    print("Occurancy for KNN:", result, "%")
+    print("Accurancy for KNN:", result*100, "%")

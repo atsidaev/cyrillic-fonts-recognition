@@ -1,11 +1,16 @@
 #!/usr/bin/python3
-
+import sklearn.preprocessing as skpreprocessing
+import matplotlib.pyplot as plt
 import configparser as cp
 import numpy as np
 import pickle
 import imutils
 import cv2
 import os
+
+def normalize_set(set):
+    return skpreprocessing.normalize(set, norm='l2')
+
 
 def image_to_feature_vector(image):
     img = cv2.imread(image,1)

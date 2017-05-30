@@ -24,9 +24,9 @@ def generate_learning_images():
         s = ""
         text = s.join((painter.get_lower_cyrillic(), painter.get_upper_cyrillic(), painter.get_digits()))
         for f in files:
-            #fontmanip.normalize_ttf_filename(os.path.join(ttfData, f))
             for i in text:
-                painter.draw_sign(os.path.join(ttfData, f), i, 40, [64, 64], learningSampleFolder)
+                for j in range(30, 40):
+                    painter.draw_sign(os.path.join(ttfData, f), i, j, [64, 64], learningSampleFolder)
         images = [k for k in os.listdir(learningSampleFolder) if os.path.isfile(os.path.join(learningSampleFolder, k)) and k.endswith(".png")]
         for i in list(images):
             tsg.generate_sample_from_image(os.path.join(learningSampleFolder,i),str(i).replace(".png",""),learningSampleFolder)

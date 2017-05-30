@@ -29,7 +29,7 @@ def draw_all_font_symbols(font, fontsize, image_size, output_dir):
     draw.text((64, 128), upper_letters,(0, 0, 0), font=img_font)
     draw.text((64, 192), digits, (0, 0, 0), font=img_font)
 
-    image.save(generate_name(output_dir, manipulator.get_fontname(font)[0], "")) #"_all"))
+    image.save(generate_name(output_dir, manipulator.get_fontname(font)[0], "_"+str(fontsize))) #"_all"))
 #TODO:color changing
 def draw_text(filename, text, fontsize, image_size, output_dir):
     image = Image.new('RGBA', (image_size[0], image_size[1]),(255,255,255))
@@ -60,7 +60,7 @@ def draw_sign(filename, sign, fontsize, image_size, output_dir):
     x = (image_size[0] - w) / 2
     y = (image_size[1] - h) / 2
     draw.text((x, y), sign, (0, 0, 0), font = draw_font)
-    image.save(os.path.join(output_dir, sign + "_" + os.path.basename(filename)[:-4] + ".png"))
+    image.save(os.path.join(output_dir, sign + "_" + os.path.basename(filename)[:-4] + "_" +str(fontsize) + ".png"))
 
 def generate_name(dir, font_name, text):
     return os.path.join(dir, font_name + text + ".png")

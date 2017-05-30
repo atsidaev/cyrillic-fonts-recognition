@@ -15,18 +15,14 @@ from os.path import isfile, join
 
 
 def generate_synthetic_raw_images(font_folder, sample_folder):
-    files = [f for f in os.listdir(font_folder) if
-             os.path.isfile(os.path.join(font_folder, f)) and (f.endswith(".otf") or f.endswith(".ttf"))]
-    '''
-    for f in files:
-        fontname = os.path.join(font_folder, f)
-        fontmanip.normalize_ttf_filename(fontname)
-    '''
+    #files = [f for f in os.listdir(font_folder) if
+     #        os.path.isfile(os.path.join(font_folder, f)) and (f.endswith(".otf") or f.endswith(".ttf"))]
     files = [f for f in os.listdir(font_folder) if
              os.path.isfile(os.path.join(font_folder, f)) and (f.endswith(".otf") or f.endswith(".ttf"))]
     for f in files:
         fontname = os.path.join(font_folder, f)
-        painter.draw_all_font_symbols(fontname, 40, (2048, 800), sample_folder)
+        for i in range(30, 40):
+            painter.draw_all_font_symbols(fontname, i, (2048, 800), sample_folder)
 
 def generate_sample_from_image(image_name, name_prefix, sample_folder):
     image = Contour.open_image(image_name)

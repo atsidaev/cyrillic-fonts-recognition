@@ -22,9 +22,10 @@ if __name__ == "__main__":
     print("Train Classifiers...")
     knn.train_classifier(trainFeat, trainLabels)
     svm.train_classifier(trainFeat, trainLabels)
-    gp.train_classifier(trainFeat, trainLabels)
+   # gp.train_classifier(trainFeat, trainLabels)
+
 
     print("Test Classifiers...")
     knn.test_classifier(testFeat, testLabels)
     svm.test_classifier(testFeat, testLabels)
-    gp.test_classifier(testFeat, testLabels)
+    #gp.test_classifier(testFeat, testLabels)

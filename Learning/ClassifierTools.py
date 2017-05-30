@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import sklearn.preprocessing as skpreprocessing
-import matplotlib.pyplot as plt
+
 import configparser as cp
 import numpy as np
 import pickle
@@ -11,10 +11,21 @@ import os
 def normalize_set(set):
     return skpreprocessing.normalize(set, norm='l2')
 
+def binarize_labels(lable):
+    lb = skpreprocessing.LabelBinarizer()
+    lb.fit(lable)
+    return lb.transform(lable)
 
 def image_to_feature_vector(image):
     img = cv2.imread(image,1)
-    return img.flatten()
+    width, height, channels = img.shape
+    vector = []
+    for i in range(0, width):
+        for j in range(0, height):
+            pixel = img[i][j]
+            brightness = (pixel[0]+pixel[1]+pixel[2])/3
+            vector.append(brightness)
+    return vector
 
 def get_lable_from_file(filename):
     return os.path.splitext(filename)[0].split("_")[1]
@@ -38,6 +49,8 @@ def read_dataset(dataset):
         lables.append(get_lable_from_file(f))
     pixels = np.array(pixels)
     lables = np.array(lables)
+    ###
+    pixels = normalize_set(pixels)
     return pixels,lables
 
 def save_model(model, name):

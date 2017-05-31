@@ -14,9 +14,13 @@ def extract_all_countours(img):
     return img, contours, hierarchy
 
 def draw_bounding_boxes(img, contours, hierarchy):
+
     for cnt in contours:
         x, y, w, h = cv2.boundingRect(cnt)
-        cv2.rectangle(img, (x, y), (x + w, y + h), (255, 255, 255), 3)
+        thickness = 2
+        if w*h < 40:
+            thickness = 3
+        cv2.rectangle(img, (x, y), (x + w, y + h), (255, 255, 255), thickness)
     return cv2.bitwise_not(img,img)
 
 def get_roi(img,x,y,w,h):

@@ -69,6 +69,16 @@ def get_class(name, csv_file):
             if name == row['filename']:
                 return row['class']
 
+def get_classes_names():
+    config = cp.ConfigParser()
+    config.read_file(open('config.ini'))
+    file = config.get("Datasets", "classes")
+    class_names = []
+    with open(file, 'r') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            class_names.append(row['filename'])
+    return class_names
 
 def label_training_set():
     config = cp.ConfigParser()

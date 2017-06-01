@@ -15,8 +15,6 @@ from os.path import isfile, join
 
 
 def generate_synthetic_raw_images(font_folder, sample_folder):
-    #files = [f for f in os.listdir(font_folder) if
-     #        os.path.isfile(os.path.join(font_folder, f)) and (f.endswith(".otf") or f.endswith(".ttf"))]
     files = [f for f in os.listdir(font_folder) if
              os.path.isfile(os.path.join(font_folder, f)) and (f.endswith(".otf") or f.endswith(".ttf"))]
     for f in files:
@@ -24,6 +22,28 @@ def generate_synthetic_raw_images(font_folder, sample_folder):
         for i in range(30, 40):
             painter.draw_all_font_symbols(fontname, i, (2048, 800), sample_folder)
 
+def generate_sample_from_image(image_name, name_prefix, sample_folder):
+    founded_strings = Contour.extract_string_segments(image_name, sample_folder)
+    print(founded_strings)
+    founded_words = []
+    for s in founded_strings:
+        founded_words += Contour.extract_word_segments(s, sample_folder)
+    print(founded_words)
+    founded_chars = []
+    for w in founded_words:
+        founded_chars+=Contour.extract_character_segments(w, sample_folder)
+    print(founded_chars)
+'''
+    image = Contour.open_image(image_name)
+    original = cv2.imread(image_name, 1)
+    img, contours, hierarchy = Contour.extract_all_countours(image)
+ #   bounding_img = Contour.draw_bounding_boxes(img, contours, hierarchy)
+  #  bounding_img2, bounding_contours, hierarchy = Contour.extract_all_countours(bounding_img)
+    for i in range(0,len(contours)):
+        sample_name = str(i)
+        Contour.write_sample_image(original, contours[i], name_prefix, sample_name, (32, 32), sample_folder)
+    '''
+'''
 def generate_sample_from_image(image_name, name_prefix, sample_folder):
     image = Contour.open_image(image_name)
     original = cv2.imread(image_name, 1)
@@ -33,7 +53,7 @@ def generate_sample_from_image(image_name, name_prefix, sample_folder):
     for i in range(0,len(bounding_contours)):
         sample_name = str(i)
         Contour.write_sample_image(original, bounding_contours[i], name_prefix, sample_name, (32, 32), sample_folder)
-
+'''
 def generate_testing_samples():
     config = cp.ConfigParser()
     config.read_file(open('config.ini'))
@@ -59,4 +79,4 @@ def generate_testing_samples():
             generate_sample_from_image(os.path.join(rawImageFolder, f),prefix, testingSampleFolder)
 
 if __name__ == "__main__":
-    generate_testing_samples()
+    generate_sample_from_image()

@@ -1,7 +1,134 @@
 import os
 import numpy as np
 import cv2
+from matplotlib import pyplot as plt
 
+
+def extract_string_segments(filename, sample_folder):
+    original = cv2.imread(filename)
+    img = cv2.imread(filename)
+    name_prefix = os.path.splitext(filename)[0]
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    thresh = cv2.adaptiveThreshold(gray, 255, 1, 1, 11, 2)
+    thresh = cv2.dilate(thresh, None, iterations=3)
+    thresh = cv2.erode(thresh, None, iterations=2)
+    img, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_LIST,cv2.CHAIN_APPROX_SIMPLE)
+    filenames = []
+    for i in range(0, len(contours)):
+        x, y, w, h = cv2.boundingRect(contours[i])
+        if w*h > 100:
+            roi = get_roi(original, x,y,w,h)
+            string_filename = os.path.join(sample_folder, name_prefix + str(i) + "_stringseg_" + ".png")
+            cv2.imwrite(string_filename, roi)
+            filenames.append(string_filename)
+    return filenames
+
+def extract_word_segments(filename, sample_folder):
+    original = cv2.imread(filename)
+    img = cv2.imread(filename)
+    name_prefix = get_name(filename)
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    thresh = cv2.adaptiveThreshold(gray, 255, 1, 1, 11, 2)
+
+    img, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+    filenames = []
+    for i in range(0, len(contours)):
+        x, y, w, h = cv2.boundingRect(contours[i])
+        if w*h > 100:
+            roi = get_roi(original, x,y,w,h)
+            string_filename = os.path.join(sample_folder, name_prefix + "_" + str(i) + "_wordseg_" + ".png")
+            cv2.imwrite(string_filename, roi)
+            filenames.append(string_filename)
+    return filenames
+
+def extract_character_segments(filename, sample_folder):
+    original = cv2.imread(filename)
+    img = cv2.imread(filename)
+    columns = get_pixel_columns(img)
+    column_brightness = []
+    for c in columns:
+        average_brightness = get_average_brightness(c)
+        column_brightness.append(average_brightness)
+    height, widht, channels = img.shape
+
+    partlength = int(0.3*height)
+    candidates = find_local_mins(column_brightness, partlength)#, partition)
+    brightness_mean = find_image_brightness(original)
+    borders = filter_candidates(candidates, brightness_mean)
+    return [0]
+
+def find_image_brightness(image):
+    height, width, channels = image.shape
+    sum = 0
+    size = height*width
+    for i in range(0, height):
+        for j in range(0, width):
+            #pixel = image[i][j]
+            sum += np.mean(image[i][j])
+    return sum/size
+
+def filter_candidates(candidates, brightness_mean):
+    
+    return [0]
+'''
+def get_horisontal_partition(height, widht):
+    partition = []
+    d = int(0.3 * height)
+    partition.append(0)
+    while(True):
+        x = partition[-1] + d
+        if x >= widht:
+            break
+        else:
+            partition.append(x)
+    partition.append(widht-1)
+    return partition
+'''
+
+def find_local_mins(brighness, partlength):
+    i = 0
+    n = len(brighness)
+    local_mins = []
+    while(i <= n):
+        if i+partlength < len(brighness):
+            d = brighness[i:i+partlength]
+            k = brighness.index(min(d))
+            local_mins.append((k,brighness[k]))
+            i = k+1
+        else: break
+    return local_mins
+
+def get_pixel_columns(img):
+    height, widht, channels = img.shape
+    columns = []
+    partitions = range(0, widht)
+    for i in range(0, widht):
+        columns.append(get_roi(img, partitions[i], 0, 1, height))
+    return columns
+
+def get_average_brightness(column):
+    brightness = []
+    for pixel in column:
+        brightness.append(get_pixel_brighness(pixel))
+    return np.mean(brightness)
+
+def get_pixel_brighness(pixel):
+    return np.mean(pixel)
+
+def get_roi(img,x,y,w,h):
+    roi = img[y:y + h, x:x + w]
+    return roi
+
+def get_name(path):
+    base = os.path.basename(path)
+    return os.path.splitext(base)[0].replace("_stringseg_","")
+
+
+
+def show_image_pyplot(img):
+    plt.imshow(img, cmap='gray')
+    plt.show()
+'''
 def open_image(filename):
     img = cv2.imread(filename, cv2.CV_8UC1)
     img = cv2.GaussianBlur(img, (3, 3), 0);
@@ -14,7 +141,6 @@ def extract_all_countours(img):
     return img, contours, hierarchy
 
 def draw_bounding_boxes(img, contours, hierarchy):
-
     for cnt in contours:
         x, y, w, h = cv2.boundingRect(cnt)
         thickness = 2
@@ -42,3 +168,4 @@ def write_sample_image(image, contour, prefix, name, sample_size, sample_folder)
     filename = os.path.join(sample_folder,prefix + "_" + name + "_sample.png")
     cv2.imwrite(filename, dst)
     os.remove(temp_name)
+'''

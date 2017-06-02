@@ -24,15 +24,12 @@ def generate_synthetic_raw_images(font_folder, sample_folder):
 
 def generate_sample_from_image(image_name, name_prefix, sample_folder):
     founded_strings = Contour.extract_string_segments(image_name, sample_folder)
-    print(founded_strings)
     founded_words = []
     for s in founded_strings:
         founded_words += Contour.extract_word_segments(s, sample_folder)
-    print(founded_words)
     founded_chars = []
     for w in founded_words:
         founded_chars+=Contour.extract_character_segments(w, sample_folder)
-    print(founded_chars)
 '''
     image = Contour.open_image(image_name)
     original = cv2.imread(image_name, 1)

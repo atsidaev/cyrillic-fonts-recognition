@@ -1,8 +1,8 @@
 import os
 import numpy as np
 import cv2
-from matplotlib import pyplot as plt
-
+from Preprocessing.Contours import BrightnessAnalisys as ba
+from Preprocessing.Contours import ContourHelper as helper
 
 def extract_string_segments(filename, sample_folder):
     original = cv2.imread(filename)
@@ -17,7 +17,7 @@ def extract_string_segments(filename, sample_folder):
     for i in range(0, len(contours)):
         x, y, w, h = cv2.boundingRect(contours[i])
         if w*h > 100:
-            roi = get_roi(original, x,y,w,h)
+            roi = helper.get_roi(original, x, y, w, h)
             string_filename = os.path.join(sample_folder, name_prefix + str(i) + "_stringseg_" + ".png")
             cv2.imwrite(string_filename, roi)
             filenames.append(string_filename)
@@ -26,7 +26,7 @@ def extract_string_segments(filename, sample_folder):
 def extract_word_segments(filename, sample_folder):
     original = cv2.imread(filename)
     img = cv2.imread(filename)
-    name_prefix = get_name(filename)
+    name_prefix = helper.get_name(filename)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     thresh = cv2.adaptiveThreshold(gray, 255, 1, 1, 11, 2)
 
@@ -35,7 +35,7 @@ def extract_word_segments(filename, sample_folder):
     for i in range(0, len(contours)):
         x, y, w, h = cv2.boundingRect(contours[i])
         if w*h > 100:
-            roi = get_roi(original, x,y,w,h)
+            roi = helper.get_roi(original, x, y, w, h)
             string_filename = os.path.join(sample_folder, name_prefix + "_" + str(i) + "_wordseg_" + ".png")
             cv2.imwrite(string_filename, roi)
             filenames.append(string_filename)
@@ -44,91 +44,26 @@ def extract_word_segments(filename, sample_folder):
 def extract_character_segments(filename, sample_folder):
     original = cv2.imread(filename)
     img = cv2.imread(filename)
-    columns = get_pixel_columns(img)
+    columns = ba.get_pixel_columns(img)
     column_brightness = []
     for c in columns:
-        average_brightness = get_average_brightness(c)
+        average_brightness = ba.get_average_brightness(c)
         column_brightness.append(average_brightness)
     height, widht, channels = img.shape
 
     partlength = int(0.3*height)
-    candidates = find_local_mins(column_brightness, partlength)#, partition)
+    brightness_mean = ba.get_image_brightness(original)
+    candidates = ba.get_local_mins(column_brightness, partlength)#, partition)
 
-    brightness_mean = find_image_brightness(original)
-    borders = filter_candidates(candidates, column_brightness, brightness_mean)
-  #  draw_vertical_borders(candidates, height, img)
+    borders = ba.borders_brightness_filter(candidates, column_brightness, brightness_mean)
+
+    #borders = [(0, column_brightness[0])] + borders + [(len(column_brightness)-1, column_brightness[-1])]
+    final_borders = ba.borders_connectivity_filter(borders, columns)
+
+    final_borders = [(0, column_brightness[0])] + final_borders + [(len(column_brightness)-1, column_brightness[-1])]
+    helper.draw_vertical_borders(final_borders, height, img)
     return [0]
 
-def find_image_brightness(image):
-    height, width, channels = image.shape
-    sum = 0
-    size = height*width
-    for i in range(0, height):
-        for j in range(0, width):
-            sum += np.mean(image[i][j])
-    return sum/size
-
-def filter_candidates(candidates, brightness, border):
-    filtered = []
-    for c in candidates:
-        if check_neighbours(c, brightness, border):
-            filtered.append(c)
-    return filtered
-
-def check_neighbours(candidate, brighness, border):
-    is_bright_enough = candidate[1] < border
-    right_neighbour = candidate[0] + 2 < len(brighness) and brighness[candidate[0]+2] > border
-    left_neighbour = candidate[0] - 2 >= 0 and brighness[candidate[0]+2] > border
-    return is_bright_enough and (right_neighbour or left_neighbour)
-
-
-def find_local_mins(brighness, partlength):
-    i = 0
-    n = len(brighness)
-    local_mins = []
-    while(i <= n):
-        if i+partlength < len(brighness):
-            d = brighness[i:i+partlength]
-            k = d.index(min(d))
-            local_mins.append((i+k,brighness[i+k]))
-            i = i+k+1
-        else: break
-    return local_mins
-
-def get_pixel_columns(img):
-    height, widht, channels = img.shape
-    columns = []
-    partitions = range(0, widht)
-    for i in range(0, widht):
-        columns.append(get_roi(img, partitions[i], 0, 1, height))
-    return columns
-
-def get_average_brightness(column):
-    brightness = []
-    for pixel in column:
-        brightness.append(get_pixel_brighness(pixel))
-    return np.mean(brightness)
-
-def get_pixel_brighness(pixel):
-    return np.mean(pixel)
-
-def get_roi(img,x,y,w,h):
-    roi = img[y:y + h, x:x + w]
-    return roi
-
-def get_name(path):
-    base = os.path.basename(path)
-    return os.path.splitext(base)[0].replace("_stringseg_","")
-
-
-def draw_vertical_borders(borders, height, img):
-    for b in borders:
-        cv2.line(img, ( b[0], 0), (b[0], height-1), (0,255,0))
-    show_image_pyplot(img)
-
-def show_image_pyplot(img):
-    plt.imshow(img, cmap='gray')
-    plt.show()
 '''
 def open_image(filename):
     img = cv2.imread(filename, cv2.CV_8UC1)

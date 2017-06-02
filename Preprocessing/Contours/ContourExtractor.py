@@ -53,8 +53,10 @@ def extract_character_segments(filename, sample_folder):
 
     partlength = int(0.3*height)
     candidates = find_local_mins(column_brightness, partlength)#, partition)
+
     brightness_mean = find_image_brightness(original)
-    borders = filter_candidates(candidates, brightness_mean)
+    borders = filter_candidates(candidates, column_brightness, brightness_mean)
+  #  draw_vertical_borders(candidates, height, img)
     return [0]
 
 def find_image_brightness(image):
@@ -63,27 +65,22 @@ def find_image_brightness(image):
     size = height*width
     for i in range(0, height):
         for j in range(0, width):
-            #pixel = image[i][j]
             sum += np.mean(image[i][j])
     return sum/size
 
-def filter_candidates(candidates, brightness_mean):
-    
-    return [0]
-'''
-def get_horisontal_partition(height, widht):
-    partition = []
-    d = int(0.3 * height)
-    partition.append(0)
-    while(True):
-        x = partition[-1] + d
-        if x >= widht:
-            break
-        else:
-            partition.append(x)
-    partition.append(widht-1)
-    return partition
-'''
+def filter_candidates(candidates, brightness, border):
+    filtered = []
+    for c in candidates:
+        if check_neighbours(c, brightness, border):
+            filtered.append(c)
+    return filtered
+
+def check_neighbours(candidate, brighness, border):
+    is_bright_enough = candidate[1] < border
+    right_neighbour = candidate[0] + 2 < len(brighness) and brighness[candidate[0]+2] > border
+    left_neighbour = candidate[0] - 2 >= 0 and brighness[candidate[0]+2] > border
+    return is_bright_enough and (right_neighbour or left_neighbour)
+
 
 def find_local_mins(brighness, partlength):
     i = 0
@@ -92,9 +89,9 @@ def find_local_mins(brighness, partlength):
     while(i <= n):
         if i+partlength < len(brighness):
             d = brighness[i:i+partlength]
-            k = brighness.index(min(d))
-            local_mins.append((k,brighness[k]))
-            i = k+1
+            k = d.index(min(d))
+            local_mins.append((i+k,brighness[i+k]))
+            i = i+k+1
         else: break
     return local_mins
 
@@ -124,6 +121,10 @@ def get_name(path):
     return os.path.splitext(base)[0].replace("_stringseg_","")
 
 
+def draw_vertical_borders(borders, height, img):
+    for b in borders:
+        cv2.line(img, ( b[0], 0), (b[0], height-1), (0,255,0))
+    show_image_pyplot(img)
 
 def show_image_pyplot(img):
     plt.imshow(img, cmap='gray')

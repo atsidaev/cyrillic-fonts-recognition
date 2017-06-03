@@ -23,7 +23,7 @@ def image_to_feature_vector(image):
     for i in range(0, width):
         for j in range(0, height):
             pixel = img[i][j]
-            brightness = (pixel[0]+pixel[1]+pixel[2])/3
+            brightness = abs(255 - np.mean(pixel))#(pixel[0]+pixel[1]+pixel[2])/3
             vector.append(brightness)
     return vector
 

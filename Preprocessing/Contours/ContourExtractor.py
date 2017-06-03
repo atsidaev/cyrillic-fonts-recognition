@@ -1,8 +1,9 @@
 import os
-import numpy as np
 import cv2
-from Preprocessing.Contours import BrightnessAnalisys as ba
-from Preprocessing.Contours import ContourHelper as helper
+from Preprocessing.Contours import BorderAnalyser as ba
+from Preprocessing.Contours import PixelAnalyser as pixel
+from Preprocessing.Contours import Filters as filters
+from Preprocessing.Contours import ContourManipulator as cntmanip
 
 def extract_string_segments(filename, sample_folder):
     original = cv2.imread(filename)
@@ -17,7 +18,7 @@ def extract_string_segments(filename, sample_folder):
     for i in range(0, len(contours)):
         x, y, w, h = cv2.boundingRect(contours[i])
         if w*h > 100:
-            roi = helper.get_roi(original, x, y, w, h)
+            roi = cntmanip.get_roi(original, x, y, w, h)
             string_filename = os.path.join(sample_folder, name_prefix + str(i) + "_stringseg_" + ".png")
             cv2.imwrite(string_filename, roi)
             filenames.append(string_filename)
@@ -26,7 +27,8 @@ def extract_string_segments(filename, sample_folder):
 def extract_word_segments(filename, sample_folder):
     original = cv2.imread(filename)
     img = cv2.imread(filename)
-    name_prefix = helper.get_name(filename)
+
+    name_prefix = cntmanip.get_name(filename)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     thresh = cv2.adaptiveThreshold(gray, 255, 1, 1, 11, 2)
 
@@ -35,7 +37,7 @@ def extract_word_segments(filename, sample_folder):
     for i in range(0, len(contours)):
         x, y, w, h = cv2.boundingRect(contours[i])
         if w*h > 100:
-            roi = helper.get_roi(original, x, y, w, h)
+            roi = cntmanip.get_roi(original, x, y, w, h)
             string_filename = os.path.join(sample_folder, name_prefix + "_" + str(i) + "_wordseg_" + ".png")
             cv2.imwrite(string_filename, roi)
             filenames.append(string_filename)
@@ -44,24 +46,11 @@ def extract_word_segments(filename, sample_folder):
 def extract_character_segments(filename, sample_folder):
     original = cv2.imread(filename)
     img = cv2.imread(filename)
-    columns = ba.get_pixel_columns(img)
-    column_brightness = []
-    for c in columns:
-        average_brightness = ba.get_average_brightness(c)
-        column_brightness.append(average_brightness)
+    columns = pixel.get_pixel_columns(img)
+    column_brightness = pixel.get_brightness_distribution(columns)
     height, widht, channels = img.shape
-
-    partlength = int(0.3*height)
-    brightness_mean = ba.get_image_brightness(original)
-    candidates = ba.get_local_mins(column_brightness, partlength)#, partition)
-
-    borders = ba.borders_brightness_filter(candidates, column_brightness, brightness_mean)
-
-    #borders = [(0, column_brightness[0])] + borders + [(len(column_brightness)-1, column_brightness[-1])]
-    final_borders = ba.borders_connectivity_filter(borders, columns)
-
-    final_borders = [(0, column_brightness[0])] + final_borders + [(len(column_brightness)-1, column_brightness[-1])]
-    helper.draw_vertical_borders(final_borders, height, img)
+    final_borders = filters.get_character_borders(img,column_brightness,columns)
+    cntmanip.draw_vertical_borders(final_borders, height, img)
     return [0]
 
 '''

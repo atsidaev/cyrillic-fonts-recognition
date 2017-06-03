@@ -39,7 +39,7 @@ def borders_connectivity_filter(candidates, columns):
         return candidates
     filtered.append(candidates[0])
     for i in range(1, len(candidates)-1):
-        if ba.first_border_connectivity_check(candidates[i][0], columns):
+        if ba.brightness_connectivity_check(candidates[i][0], columns):
             continue
       #  elif second_border_connectivity_check(i, candidates, columns,filtered):
        #     continue
@@ -51,7 +51,7 @@ def borders_distance_filter(candidates, columns):
     filtered = []
     filtered.append((0, px.get_average_brightness(columns[0])))
     for i in range(1, len(candidates)-1):
-        if ba.second_border_connectivity_check(candidates[i][0], candidates, columns,filtered):
+        if ba.distance_connectivity_check(candidates[i][0], candidates, columns, filtered):
             continue
         else:
             filtered.append(candidates[i])

@@ -76,4 +76,5 @@ def generate_testing_samples():
             generate_sample_from_image(os.path.join(rawImageFolder, f),prefix, testingSampleFolder)
 
 if __name__ == "__main__":
+
     generate_sample_from_image()

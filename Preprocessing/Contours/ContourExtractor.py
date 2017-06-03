@@ -18,9 +18,8 @@ def extract_string_segments(filename, sample_folder):
     for i in range(0, len(contours)):
         x, y, w, h = cv2.boundingRect(contours[i])
         if w*h > 100:
-            roi = cntmanip.get_roi(original, x, y, w, h)
             string_filename = os.path.join(sample_folder, name_prefix + str(i) + "_stringseg_" + ".png")
-            cv2.imwrite(string_filename, roi)
+            cntmanip.draw_contour(original, contours[i], string_filename)
             filenames.append(string_filename)
     return filenames
 
@@ -37,21 +36,25 @@ def extract_word_segments(filename, sample_folder):
     for i in range(0, len(contours)):
         x, y, w, h = cv2.boundingRect(contours[i])
         if w*h > 100:
-            roi = cntmanip.get_roi(original, x, y, w, h)
             string_filename = os.path.join(sample_folder, name_prefix + "_" + str(i) + "_wordseg_" + ".png")
-            cv2.imwrite(string_filename, roi)
+            cntmanip.draw_contour(original, contours[i], string_filename)
             filenames.append(string_filename)
     return filenames
 
 def extract_character_segments(filename, sample_folder):
-    original = cv2.imread(filename)
     img = cv2.imread(filename)
+    name_prefix = cntmanip.get_name(filename)
     columns = pixel.get_pixel_columns(img)
     column_brightness = pixel.get_brightness_distribution(columns)
     height, widht, channels = img.shape
     final_borders = filters.get_character_borders(img,column_brightness,columns)
-    cntmanip.draw_vertical_borders(final_borders, height, img)
-    return [0]
+    segments = cntmanip.get_character_segments(img, final_borders)
+    filenames = []
+    for seg in range(0, len(segments)):
+        string_name = os.path.join(sample_folder, name_prefix + "_" + str(seg) + "_char_" + ".png")
+        cntmanip.draw_segment(segments[seg], string_name)
+        filenames.append(string_name)
+    return filenames
 
 '''
 def open_image(filename):

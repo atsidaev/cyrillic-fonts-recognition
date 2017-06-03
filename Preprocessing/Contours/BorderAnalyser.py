@@ -23,10 +23,10 @@ def turtle_check(candidate, pixel_column):
     return True
 
 
-def first_border_connectivity_check(candidate_index, columns):
+def brightness_connectivity_check(candidate_index, columns):
     left_index = candidate_index - 1
     roi = columns[left_index:left_index+3]
-    return column_connectivity_check( roi[0], roi[1]) and column_connectivity_check(roi[1], roi[2])
+    return column_connectivity_check(roi[1],  roi[0]) and column_connectivity_check(roi[1], roi[2])
 
 def column_connectivity_check(candidate, neighbour):
     high1, middle1, low1 = pixel.get_max_brightness_lvl(candidate)
@@ -42,7 +42,7 @@ def column_connectivity_check(candidate, neighbour):
 
     return first_crit and second_crit and third_crit
 
-def second_border_connectivity_check(candidate_index, candidates, columns, filtered):
+def distance_connectivity_check(candidate_index, candidates, columns, filtered):
     n = len(columns[0])
     dmin = int(0.4*n)
     dk = abs(candidate_index - filtered[-1][0])

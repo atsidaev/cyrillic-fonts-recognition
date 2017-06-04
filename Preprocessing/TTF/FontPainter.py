@@ -21,9 +21,9 @@ def draw_all_font_symbols(font, fontsize, image_size, output_dir):
     elif os.path.splitext(font)[1] == ".otf":
        img_font = ImageFont.FreeTypeFont(font, size=fontsize)
 
-    lower_letters = get_lower_cyrillic().replace("", " ")[1:-1]
-    upper_letters = get_upper_cyrillic().replace("", " ")[1:-1]
-    digits = get_digits().replace("", " ")[1:-1]
+    lower_letters = get_lower_cyrillic()#.replace("", " ")[1:-1]
+    upper_letters = get_upper_cyrillic()#.replace("", " ")[1:-1]
+    digits = get_digits()#.replace("", " ")[1:-1]
 
     draw.text((64, 64), lower_letters,(0, 0, 0), font=img_font)
     draw.text((64, 128), upper_letters,(0, 0, 0), font=img_font)

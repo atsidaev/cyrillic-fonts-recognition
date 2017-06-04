@@ -18,7 +18,7 @@ def extract_string_segments(filename, sample_folder):
     for i in range(0, len(contours)):
         x, y, w, h = cv2.boundingRect(contours[i])
         if w*h > 100:
-            string_filename = os.path.join(sample_folder, name_prefix + str(i) + "_stringseg_" + ".png")
+            string_filename = os.path.join(sample_folder, name_prefix+ '_' + str(i) + "_stringseg_" + ".png")
             cntmanip.draw_contour(original, contours[i], string_filename)
             filenames.append(string_filename)
     return filenames

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Preprocessing/ImageSet/TestingImageSetGenerator.py" line="68" />
+    <bookmark url="file://$PROJECT_DIR$/Preprocessing/ImageSet/TestingImageSetGenerator.py" line="75" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8b19964-0ede-437a-9aa4-5b24785d6b95" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/Contours/BorderAnalyser.py" afterPath="$PROJECT_DIR$/Preprocessing/Contours/BorderAnalyser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Learning/KNNClassifier.py" afterPath="$PROJECT_DIR$/Learning/KNNClassifier.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Learning/SVMClassifier.py" afterPath="$PROJECT_DIR$/Learning/SVMClassifier.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/Contours/ContourExtractor.py" afterPath="$PROJECT_DIR$/Preprocessing/Contours/ContourExtractor.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/Contours/ContourManipulator.py" afterPath="$PROJECT_DIR$/Preprocessing/Contours/ContourManipulator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/Contours/Filters.py" afterPath="$PROJECT_DIR$/Preprocessing/Contours/Filters.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/ImageSet/TestingImageSetGenerator.py" afterPath="$PROJECT_DIR$/Preprocessing/ImageSet/TestingImageSetGenerator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/TTF/FontPainter.py" afterPath="$PROJECT_DIR$/Preprocessing/TTF/FontPainter.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,11 +26,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ContourExtractor.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ContourExtractor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Preprocessing/Contours/ContourExtractor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="49" column="80" lean-forward="false" selection-start-line="49" selection-start-column="80" selection-end-line="49" selection-end-column="80" />
+            <state relative-caret-position="-889">
+              <caret line="20" column="73" lean-forward="false" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -40,8 +41,8 @@
       <file leaf-file-name="ContourManipulator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Preprocessing/Contours/ContourManipulator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="34" column="12" lean-forward="false" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
+            <state relative-caret-position="256">
+              <caret line="45" column="26" lean-forward="false" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
               <folding>
                 <element signature="e#19#29#0" expanded="true" />
               </folding>
@@ -49,24 +50,64 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LearningImageSetGenerator.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Preprocessing/ImageSet/LearningImageSetGenerator.py">
+      <file leaf-file-name="TestingImageSetGenerator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Preprocessing/ImageSet/TestingImageSetGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
-              <caret line="31" column="15" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="15" />
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding>
+                <element signature="e#20#77#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FontPainter.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Preprocessing/TTF/FontPainter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestingImageSetGenerator.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Preprocessing/ImageSet/TestingImageSetGenerator.py">
+      <file leaf-file-name="config.ini" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="947">
-              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-              <folding>
-                <element signature="e#20#77#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="17">
+              <caret line="1" column="59" lean-forward="false" selection-start-line="1" selection-start-column="59" selection-end-line="1" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SVMClassifier.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Learning/SVMClassifier.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="34" column="49" lean-forward="false" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KNNClassifier.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Learning/KNNClassifier.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="36" column="50" lean-forward="false" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -127,17 +168,13 @@
         <option value="$PROJECT_DIR$/Learning/DrawPlots.py" />
         <option value="$PROJECT_DIR$/Learning/GaussianProcessClassifier.py" />
         <option value="$PROJECT_DIR$/Preprocessing/ImageSet/LearningImageSetGenerator.py" />
-        <option value="$PROJECT_DIR$/Preprocessing/TTF/FontPainter.py" />
         <option value="$PROJECT_DIR$/Data/Classes.csv" />
         <option value="$PROJECT_DIR$/Preprocessing/Other/ConfigGenerator.py" />
         <option value="$PROJECT_DIR$/Preprocessing/ImageSet/LabelSet.py" />
-        <option value="$PROJECT_DIR$/Learning/KNNClassifier.py" />
-        <option value="$PROJECT_DIR$/Learning/SVMClassifier.py" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/Preprocessing/Contours/CharacterAnalysis.py" />
         <option value="$PROJECT_DIR$/Preprocessing/Contours/ROIManipulator.py" />
         <option value="$PROJECT_DIR$/Learning/ClassifierTools.py" />
-        <option value="$PROJECT_DIR$/config.ini" />
         <option value="$PROJECT_DIR$/Preprocessing/Contours/ContourHelper.py" />
         <option value="$PROJECT_DIR$/Preprocessing/Contours/BrightnessAnalisys.py" />
         <option value="$PROJECT_DIR$/Preprocessing/Contours/ContourDrawing.py" />
@@ -145,10 +182,14 @@
         <option value="$PROJECT_DIR$/Preprocessing/Contours/PixelAnalyser.py" />
         <option value="$PROJECT_DIR$/Preprocessing/Contours/Filters.py" />
         <option value="$PROJECT_DIR$/Preprocessing/Contours/BorderAnalyser.py" />
-        <option value="$PROJECT_DIR$/Preprocessing/ImageSet/TestingImageSetGenerator.py" />
         <option value="$PROJECT_DIR$/Learning/PrepareDataset.py" />
-        <option value="$PROJECT_DIR$/Preprocessing/Contours/ContourManipulator.py" />
         <option value="$PROJECT_DIR$/Preprocessing/Contours/ContourExtractor.py" />
+        <option value="$PROJECT_DIR$/Preprocessing/ImageSet/TestingImageSetGenerator.py" />
+        <option value="$PROJECT_DIR$/Preprocessing/Contours/ContourManipulator.py" />
+        <option value="$PROJECT_DIR$/Learning/SVMClassifier.py" />
+        <option value="$PROJECT_DIR$/Learning/KNNClassifier.py" />
+        <option value="$PROJECT_DIR$/Preprocessing/TTF/FontPainter.py" />
+        <option value="$PROJECT_DIR$/config.ini" />
       </list>
     </option>
   </component>
@@ -174,6 +215,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -183,6 +225,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="cyrillic-font-recognition" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cyrillic-font-recognition" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cyrillic-font-recognition" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -216,7 +272,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -331,7 +386,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="cyrillic-font-recognition" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
-      <option name="PARAMETERS" value="-s s.jpg" />
+      <option name="PARAMETERS" value="--test" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
@@ -802,7 +857,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496523608034</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="now we can save testing contours with new approach">
+      <created>1496529476424</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1496529476424</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -824,12 +886,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="32" width="1282" height="948" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27795786" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28200972" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886723" sideWeight="0.47415185" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4457978" sideWeight="0.5356564" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276492" sideWeight="0.4838449" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4457978" sideWeight="0.4643436" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886723" sideWeight="0.49030694" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296837" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -844,6 +904,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276492" sideWeight="0.4838449" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -870,7 +931,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="fix thing with wrong contour recognition" />
     <MESSAGE value="work in progress merge some contours" />
     <MESSAGE value="TODO:add sort of dirt euristic for intercepted contours" />
     <MESSAGE value="deside to drop bad recognised contours" />
@@ -895,15 +955,21 @@
     <MESSAGE value="rebuilding contour detection in progress" />
     <MESSAGE value="rebuilding contour detection in progress almost done but i have annoying bug to deal with" />
     <MESSAGE value="Refactor character segmentation + get some better results" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor character segmentation + get some better results" />
+    <MESSAGE value="now we can save testing contours with new approach" />
+    <option name="LAST_COMMIT_MESSAGE" value="now we can save testing contours with new approach" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Preprocessing/Contours/ContourManipulator.py</url>
-          <line>39</line>
-          <option name="timeStamp" value="215" />
+          <url>file://$PROJECT_DIR$/app.py</url>
+          <line>55</line>
+          <option name="timeStamp" value="219" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Learning/SVMClassifier.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="221" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -913,7 +979,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="216" />
+      <option name="time" value="224" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -922,60 +988,8 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/11_temp_.png" />
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/13_temp_.png" />
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/14_temp_.png" />
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/20_temp_.png" />
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/_temp__6_sample.png" />
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/25_temp_.png" />
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/24_temp_.png" />
-    <entry file="file://$PROJECT_DIR$/Data/LearningSamples/0_6.png" />
-    <entry file="file://$PROJECT_DIR$/Data/LearningSamples/1_5.png" />
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/s_stringseg_7.png" />
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/s_stringseg_3.png" />
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/s_stringseg_1.png" />
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/s_stringseg_0.png" />
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/s_stringseg_5.png" />
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/s_stringseg_2.png" />
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/s_stringseg_6.png" />
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/s_stringseg_8.png" />
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/s_stringseg_4.png" />
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/s_stringseg_2_stringseg_2.png" />
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/s2_82_wordseg_.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/s2_88_wordseg_.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/s2_86_wordseg_.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/s2_85_wordseg_.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/s2_87_wordseg_.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/s2_83_wordseg_.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/s2_79_wordseg_.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s2_83_wordseg_.png" />
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s2_79_wordseg_.png" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
@@ -988,50 +1002,12 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/s2_77_wordseg_.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/s8_stringseg_.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/s6_stringseg_.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/s4_stringseg_.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/s2_stringseg_.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Learning/SVMClassifier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/RawImages/s2_75_wordseg_.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s2_77_wordseg_.png" />
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s8_stringseg_.png" />
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s6_stringseg_.png" />
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s4_stringseg_.png" />
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s2_stringseg_.png" />
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s2_75_wordseg_.png" />
     <entry file="file://$PROJECT_DIR$/Learning/ClassifierTools.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
@@ -1051,9 +1027,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-544">
           <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="39" />
-          <folding>
-            <element signature="e#20#75#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1061,81 +1034,207 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-192">
           <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/TestingSamples/s2_83_wordseg_0_2_wordseg_.png" />
+    <entry file="file://$PROJECT_DIR$/Data/TestingSamples/s4_19_wordseg_0_0_wordseg_.png" />
+    <entry file="file://$PROJECT_DIR$/Data/TestingSamples/s6_34_wordseg_0_2_wordseg_.png" />
+    <entry file="file://$PROJECT_DIR$/Data/TestingSamples/s8_35_wordseg_0_0_wordseg_.png" />
+    <entry file="file://$PROJECT_DIR$/Learning/PrepareDataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="3" lean-forward="false" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Preprocessing/ImageSet/LearningImageSetGenerator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
+        <state relative-caret-position="527">
           <caret line="31" column="15" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/TestingSamples/s2_83_wordseg_0_2_wordseg_.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/TestingSamples/s4_19_wordseg_0_0_wordseg_.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/TestingSamples/s6_34_wordseg_0_2_wordseg_.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/TestingSamples/s8_35_wordseg_0_0_wordseg_.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Learning/PrepareDataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="3" lean-forward="false" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessing/ImageSet/TestingImageSetGenerator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="947">
-          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
           <folding>
-            <element signature="e#20#77#0" expanded="true" />
+            <element signature="e#19#44#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s_2_75_0_char_.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s_2_78_2_char_.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s_2_78_1_char_.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s_2_78_0_char_.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s_2_77_2_char_.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s_2_77_1_char_.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s_2_77_0_char_.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s_2_76_1_char_.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s_2_76_0_char_.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s_2_75_2_char_.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s_8_32_1_char_.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s0_sample_.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s1_sample_.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s2_sample_.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s3_sample_.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s5_sample_.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s7_sample_.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s13_sample_.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s19_sample_.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/s9_sample_.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Preprocessing/Contours/ContourExtractor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-889">
+          <caret line="20" column="73" lean-forward="false" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Preprocessing/Contours/ContourManipulator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="34" column="12" lean-forward="false" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
+        <state relative-caret-position="256">
+          <caret line="45" column="26" lean-forward="false" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
           <folding>
             <element signature="e#19#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessing/Contours/ContourExtractor.py">
+    <entry file="file://$PROJECT_DIR$/Data/TestingSamples/0_6.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="49" column="80" lean-forward="false" selection-start-line="49" selection-start-column="80" selection-end-line="49" selection-end-column="80" />
+        <state relative-caret-position="278">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Learning/SVMClassifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="34" column="49" lean-forward="false" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Learning/KNNClassifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="36" column="50" lean-forward="false" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Preprocessing/ImageSet/TestingImageSetGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#20#77#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Preprocessing/TTF/FontPainter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/RawImages/A&amp;S Porkchop Primitive Cyrillic Bold_30.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="59" lean-forward="false" selection-start-line="1" selection-start-column="59" selection-end-line="1" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>

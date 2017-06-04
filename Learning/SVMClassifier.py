@@ -32,7 +32,7 @@ def predict(image):
     config.read_file(open('config.ini'))
     dir = config.get("Directories", "rawimagefolder")
     tisg.generate_sample_from_image(image,"_temp_", dir)
-    roi = [f for f in os.listdir(dir) if "_temp_" in f]
+    roi = [f for f in os.listdir(dir) if "_sample_" in f]
     labels = ls.get_classes_names()
     loaded_model = load()
     predictions = []

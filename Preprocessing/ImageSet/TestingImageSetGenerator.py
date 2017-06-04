@@ -4,6 +4,7 @@ import Preprocessing.Contours.ContourExtractor as Contour
 import Preprocessing.TTF.FontPainter as painter
 import Preprocessing.TTF.FontManipulator as fontmanip
 import Preprocessing.Other.FileHelper as fh
+from Preprocessing.Contours import ContourManipulator as cntmanip
 import configparser as cp
 import io
 import cv2
@@ -30,6 +31,12 @@ def generate_sample_from_image(image_name, name_prefix, sample_folder):
     founded_chars = []
     for w in founded_words:
         founded_chars+=Contour.extract_character_segments(w, sample_folder)
+    for c in range(0, len(founded_chars)):
+        cntmanip.make_sample_from_image(founded_chars[c], str(c))
+    unnessesary_files = founded_strings + founded_words + founded_chars
+    for u in unnessesary_files:
+        os.remove(u)
+
 '''
     image = Contour.open_image(image_name)
     original = cv2.imread(image_name, 1)

@@ -40,5 +40,13 @@ def get_character_segments(img, borders):
             segments.append(roi)
     return segments
 
+def make_sample_from_image(path, prefix):
+    filename = os.path.basename(path)#.split("_")[0]
+    dirname = os.path.dirname(path)
+    img = cv2.imread(path)
+    new_name = os.path.join(dirname, filename + "_" + prefix + "_sample_.png")
+    cv2.imwrite(new_name, cv2.resize(img,(32, 32), interpolation = cv2.INTER_CUBIC))
+
+
 def draw_segment(roi, name):
     cv2.imwrite(name, roi)
